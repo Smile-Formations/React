@@ -50,7 +50,7 @@ Write in `index.js`:
 ```jsx
 import { createRoot } from 'react-dom/client';
 
-const element = <div>Hello World !</div>;
+const element = <div>Hell Yeah!</div>;
 const root = createRoot(document.getElementById('root'));
 root.render(element);
 ```

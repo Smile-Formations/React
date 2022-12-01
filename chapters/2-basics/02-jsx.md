@@ -8,11 +8,11 @@ layout: center
 
 ---
 
-### `Article` component
+### `JukeBox` component
 
 We will develop an application that manages articles.
 
-We will begin with an `Article` component:
+We will begin with an `JukeBox` component:
 
 - Inside `src` create a `components` directory
 - Inside `components` create an `JukeBox` directory
@@ -60,7 +60,7 @@ root.render(
 
 It should detect your modifications, re-build and reload the page.
 
-<alert>`<React.StrictMode>` is a tool for highlighting potential problems in an application, but it will trigger an additionnal render in development mode.</alert>
+<alert>`<React.StrictMode>` is a tool for highlighting potential problems in an application, but it will trigger an additional render in development mode.</alert>
 
 ---
 
