@@ -1,42 +1,42 @@
 import { act, renderHook } from '@testing-library/react-hooks';
 
-import * as articleService from '../../services/article/article';
+import * as trackService from '../../services/track/track';
 
-import { useFilteredArticles } from './useFilteredArticles';
+import { useFilteredTracks } from './useFilteredTracks';
 
-jest.mock('../../services/article/article');
+jest.mock('../../services/track/track');
 
-describe('useFilteredArticles hook', () => {
+describe('useFilteredTracks hook', () => {
   beforeEach(() => {
-    jest.spyOn(articleService, 'getArticles');
-    articleService.getArticles.mockReturnValue(new Promise(resolve => resolve([
+    jest.spyOn(trackService, 'getTracks');
+    trackService.getTracks.mockReturnValue(new Promise(resolve => resolve([
       {
         "id": 1,
         "title": "JukeBox 1",
         "category": 1,
         "published": true,
-        "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       },
       {
         "id": 2,
         "title": "JukeBox 2",
         "category": 2,
         "published": true,
-        "content": "Donec malesuada enim ac ipsum dictum placerat."
+        "description": "Donec malesuada enim ac ipsum dictum placerat."
       },
       {
         "id": 3,
         "title": "JukeBox 3",
         "category": 1,
         "published": false,
-        "content": "Phasellus sit amet bibendum augue."
+        "description": "Phasellus sit amet bibendum augue."
       },
       {
         "id": 4,
         "title": "JukeBox 4",
         "category": 1,
         "published": false,
-        "content": "Lorem ipsum dolor sit amet."
+        "description": "Lorem ipsum dolor sit amet."
       }
     ])));
   });
@@ -45,20 +45,20 @@ describe('useFilteredArticles hook', () => {
     jest.clearAllMocks();
   });
 
-  it('loads the articles', async () => {
+  it('loads the tracks', async () => {
     const { result, waitForNextUpdate } = renderHook(
-      () => useFilteredArticles()
+      () => useFilteredTracks()
     );
-    expect(articleService.getArticles).toHaveBeenCalled();
-    expect(result.current.articles.length).toEqual(0);
+    expect(trackService.getTracks).toHaveBeenCalled();
+    expect(result.current.tracks.length).toEqual(0);
     expect(result.current.filters.category).toEqual('');
     await waitForNextUpdate();
-    expect(result.current.articles.length).toEqual(4);
+    expect(result.current.tracks.length).toEqual(4);
   });
 
-  it('filters the articles', async () => {
+  it('filters the tracks', async () => {
     const { result, waitForNextUpdate } = renderHook(
-      () => useFilteredArticles()
+      () => useFilteredTracks()
     );
     await waitForNextUpdate();
     act(() => result.current.setFilters({
@@ -66,12 +66,12 @@ describe('useFilteredArticles hook', () => {
       title: 'Article',
       published: 'published'
     }));
-    expect(result.current.articles.length).toEqual(1);
+    expect(result.current.tracks.length).toEqual(1);
   });
 
-  it('updates the articles', async () => {
+  it('updates the tracks', async () => {
     const { result, waitForNextUpdate } = renderHook(
-      () => useFilteredArticles()
+      () => useFilteredTracks()
     );
     await waitForNextUpdate();
     act(() => result.current.setArticles([
@@ -83,7 +83,7 @@ describe('useFilteredArticles hook', () => {
         "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
       }
     ]));
-    expect(result.current.articles.length).toEqual(1);
+    expect(result.current.tracks.length).toEqual(1);
   });
 });
 

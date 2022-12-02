@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from '@testing-library/react';
 
 import App from './App';
 
-jest.mock('../../services/article/article');
+jest.mock('../../services/track/track');
 jest.mock('../../services/category/category');
 
 describe('App component', () => {

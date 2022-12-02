@@ -1,5 +1,5 @@
 import { useCategories } from '../../hooks/useCategories/useCategories';
-import { useFilteredArticles } from '../../hooks/useFilteredArticles/useFilteredArticles';
+import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
 
 import Container from '../Container/Container';
 import Filters from '../Filters/Filters';
@@ -7,7 +7,7 @@ import List from '../List/List';
 
 function App() {
   const categories = useCategories();
-  const { articles, filters, setFilters } = useFilteredArticles();
+  const { articles, filters, setFilters } = useFilteredTracks();
 
   return (
     <Container>
