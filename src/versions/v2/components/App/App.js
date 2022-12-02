@@ -1,34 +1,26 @@
-import { useCategories } from '../../hooks/useCategories/useCategories';
-import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 
-import Container from '../Container/Container';
-import Filters from '../Filters/Filters';
-import List from '../List/List';
+import { useCategories } from '../../hooks/useCategories/useCategories';
+
+import TrackPage from '../TrackPage/TrackPage';
+import TracksPage from '../TracksPage/TracksPage';
+import Layout from '../Layout/Layout';
 
 function App() {
-  const categories = useCategories();
-  const { tracks, filters, setFilters } = useFilteredTracks();
+    const categories = useCategories();
 
-  return (
-    <Container>
-      <Filters
-        categories={categories}
-        filters={filters}
-        onFilterChanged={handleFilterChanged}
-      />
-      <List
-        tracks={tracks}
-        categories={categories}
-      />
-    </Container>
-  );
-
-  function handleFilterChanged(filter, value) {
-    setFilters((prevState) => ({
-      ...prevState,
-      [filter]: value,
-    }));
-  }
+    return (
+        <Router>
+            <Routes>
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<TracksPage categories={categories} />}/>
+                    <Route path="/track" element={<TrackPage categories={categories} />}/>
+                    <Route path="/track/:id" element={<TrackPage categories={categories} />}/>
+                    <Route path="*" element={<Navigate to="/" />}/>
+                </Route>
+            </Routes>
+        </Router>
+    );
 }
 
 export default App;
