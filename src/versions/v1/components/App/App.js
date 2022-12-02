@@ -7,7 +7,7 @@ import List from '../List/List';
 
 function App() {
   const categories = useCategories();
-  const { articles, filters, setFilters } = useFilteredTracks();
+  const { tracks, filters, setFilters } = useFilteredTracks();
 
   return (
     <Container>
@@ -17,7 +17,7 @@ function App() {
         onFilterChanged={handleFilterChanged}
       />
       <List
-        articles={articles}
+        tracks={tracks}
         categories={categories}
       />
     </Container>
