@@ -1,3 +1,3 @@
 export function getTracks() {
-  return fetch("http://localhost:3001/articles").then((data) => data.json());
+  return fetch("http://localhost:3001/tracks").then((data) => data.json());
 };
