@@ -120,7 +120,7 @@ it('renders without crashing', async () => {
   await act(async () => {
     render(<App />, div);
   });
-  const elements = div.querySelectorAll('.Article');
+  const elements = div.querySelectorAll('.JukeBox');
   expect(elements.length).toBe(3);
   unmountComponentAtNode(div);
   div.remove();
