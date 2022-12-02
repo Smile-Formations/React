@@ -1,0 +1,38 @@
+.TrackForm__table {
+  display: table;
+  width: 100%;
+}
+
+.TrackForm__row {
+  display: table-row;
+}
+
+.TrackForm__cell {
+  display: table-cell;
+  padding: 5px 10px;
+}
+
+.TrackForm__cell input[type=text],
+.TrackForm__cell select,
+.TrackForm__cell textarea {
+  width: 100%;
+}
+
+.TrackForm__buttons {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.TrackForm__button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #ddd;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  border: 0;
+}
+
+.TrackForm__button:hover {
+  background-color: #ccc;
+}
