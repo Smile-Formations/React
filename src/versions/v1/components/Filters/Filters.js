@@ -24,7 +24,7 @@ function Filters(props) {
       </div>
       <div className="Filters__cell" >
         <select name="category" onChange={handleChange} value={category} >
-          <option value="" ></option>
+          <option value="" />
           {categories.map(category => (
             <option key={category.id} value={category.id} >{category.title}</option>
           ))}
