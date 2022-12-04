@@ -17,9 +17,9 @@ describe('App component', () => {
 
   it('filters the tracks', async () => {
     render(<TracksPage />, {wrapper: MemoryRouter});
-    fireEvent.click(screen.getByLabelText('Published'));
+    fireEvent.click(screen.getByLabelText('Band'));
     const elements = await screen.findAllByText(/Track [0-9]/);
-    expect(elements.length).toBe(2);
+    expect(elements.length).toBe(3);
   });
 
   it('removes one track', async () => {
