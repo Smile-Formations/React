@@ -1,4 +1,4 @@
-import { lazy } from "react";
+import { lazy, Suspense } from "react";
 import {
     BrowserRouter as Router,
     Navigate,
@@ -13,6 +13,7 @@ import Layout from "../Layout/Layout";
 
 const TrackPage = lazy(() => import("../TrackPage/TrackPage"));
 const TracksPage = lazy(() => import("../TracksPage/TracksPage"));
+const About = lazy(() => import("../About/About"));
 
 function App() {
     const categories = useCategories();
@@ -20,20 +21,26 @@ function App() {
     return (
         <Categories.Provider value={categories}>
             <Router>
-                <Routes>
-                    <Route path="/" element={<Layout />}>
-                        <Route index element={<TracksPage categories={categories} />} />
-                        <Route
-                            path="/track"
-                            element={<TrackPage categories={categories} />}
-                        />
-                        <Route
-                            path="/track/:id"
-                            element={<TrackPage categories={categories} />}
-                        />
-                        <Route path="*" element={<Navigate to="/" />} />
-                    </Route>
-                </Routes>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Routes>
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<TracksPage categories={categories} />} />
+                            <Route
+                                path="/track"
+                                element={<TrackPage categories={categories} />}
+                            />
+                            <Route
+                                path="/track/:id"
+                                element={<TrackPage categories={categories} />}
+                            />
+                            <Route
+                                path="/about"
+                                element={<About />}
+                            />
+                            <Route path="*" element={<Navigate to="/" />} />
+                        </Route>
+                    </Routes>
+                </Suspense>
             </Router>
         </Categories.Provider>
     );

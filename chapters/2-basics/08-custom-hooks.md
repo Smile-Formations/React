@@ -16,11 +16,11 @@ A custom hook is just a function which name starts with `use`.
 
 Inside a hook you cannot render `JSX` but you can call other hooks.
 
-This is a powerfull features to externalize and share business logic.
+This is a powerful features to externalize and share business logic.
 
 ---
 
-### Exercice
+### Exercise
 
 1. Inside src create a hooks directory
 2. Inside hooks create a useTracks file

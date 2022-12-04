@@ -131,7 +131,7 @@ When using a function, you will get the previous state value as parameter.
 
 ### Warning 1
 
-<alert type="warning">Updating the state is asynchronous so changes do not apply immediatly.</alert>
+<alert type="warning">Updating the state is asynchronous so changes do not apply immediately.</alert>
 
 It means this example is wrong: https://codepen.io/tonai/pen/BdLrPm?editors=0010
 
