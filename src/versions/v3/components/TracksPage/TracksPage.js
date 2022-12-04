@@ -1,3 +1,5 @@
+import { useCallback } from 'react';
+
 import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
 import { removeTrack } from '../../services/track/track';
 
@@ -7,37 +9,19 @@ import List from '../List/List';
 import Title from '../Title/Title';
 
 const title = 'Tracks';
+const linkProps = { children: 'Add new track', to: '/track' };
 
-function TracksPage(props) {
-  const { categories } = props;
+function TracksPage() {
   const { tracks, filters, setTracks, setFilters } = useFilteredTracks();
 
-  return (
-    <div>
-      <Title linkProps={{ children: 'Add new track', to: '/track' }} title={title}></Title>
-      <Container>
-        <Filters
-          categories={categories}
-          filters={filters}
-          onFilterChanged={handleFilterChanged}
-        />
-        <List
-          tracks={tracks}
-          categories={categories}
-          onRemove={handleRemove}
-        />
-      </Container>
-    </div>
-  );
+  const handleFilterChanged = useCallback((filter, value) =>
+          setFilters((prevState) => ({
+            ...prevState,
+            [filter]: value,
+          }))
+      , [setFilters]);
 
-  function handleFilterChanged(filter, value) {
-    setFilters((prevState) => ({
-      ...prevState,
-      [filter]: value,
-    }));
-  }
-
-  function handleRemove (id) {
+  const handleRemove = useCallback((id) => {
     // Naive (ensure new list is sync with BE)
     // removeTrack(id)
     //   .then(() => getTracks())
@@ -50,12 +34,24 @@ function TracksPage(props) {
 
     // Classic
     removeTrack(id)
-      .then(() => setTracks(prevState => prevState.filter(track => track.id !== id)));
-  }
-}
+        .then(() => setTracks(prevState => prevState.filter(track => track.id !== id)));
+  }, [setTracks]);
 
-TracksPage.defaultProps = {
-  categories: []
-};
+  return (
+      <>
+        <Title linkProps={linkProps} title={title} />
+        <Container>
+          <Filters
+              filters={filters}
+              onFilterChanged={handleFilterChanged}
+          />
+          <List
+              tracks={tracks}
+              onRemove={handleRemove}
+          />
+        </Container>
+      </>
+  );
+}
 
 export default TracksPage;

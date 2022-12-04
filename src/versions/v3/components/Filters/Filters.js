@@ -1,11 +1,16 @@
-import { useEffect, useRef } from 'react';
+import { memo, useContext, useEffect, useRef } from 'react';
+
+import Categories from '../../contexts/Categories';
+// import { useDebug } from '../../hooks/useDebug/useDebug';
 
 import './Filters.css';
 
 function Filters(props) {
-  const { categories, filters, onFilterChanged } = props;
+  const { filters, onFilterChanged } = props;
   const { category, title } = filters;
+  const categories = useContext(Categories);
   const inputRef = useRef();
+  // useDebug(props);
 
   useEffect(() => {
     inputRef.current.focus();
@@ -40,8 +45,7 @@ function Filters(props) {
 }
 
 Filters.defaultProps = {
-  categories: [],
   filters: {}
 };
 
-export default Filters;
+export default memo(Filters);
