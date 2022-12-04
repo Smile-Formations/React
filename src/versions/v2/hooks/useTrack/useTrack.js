@@ -5,8 +5,7 @@ import { getTrack } from '../../services/track/track';
 export function useTrack(trackId) {
   const [track, setTrack] = useState({
     category: 0,
-    content: '',
-    published: false,
+    description: '',
     title: ''
   });
 

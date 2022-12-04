@@ -35,14 +35,6 @@ function TrackForm(props) {
             <textarea id="description" name="description" onChange={handleChange} value={track.description} />
           </div>
         </div>
-        <div className="TrackForm__row">
-          <div className="TrackForm__cell">
-            <label htmlFor="published" >Published :</label>
-          </div>
-          <div className="TrackForm__cell">
-            <input checked={track.published} id="published" name="published" onChange={handleChange} type="checkbox" />
-          </div>
-        </div>
       </div>
       <div className="TrackForm__buttons">
         <input className="TrackForm__button" type="submit" value="Submit" />
@@ -57,10 +49,6 @@ function TrackForm(props) {
     switch(name) {
       case 'category':
         value = Number(event.target.value);
-        break;
-
-      case 'published':
-        value = event.target.checked;
         break;
 
       default:
