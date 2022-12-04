@@ -13,7 +13,6 @@ function JukeBox(props) {
     <div className={classnames('JukeBox', {isSelected: selected})} onClick={handleClick} >
       <div className="JukeBox__cell">{track.title}</div>
       <div className="JukeBox__cell">{category ? category.title : track.category}</div>
-      <div className="JukeBox__cell">{track.published ? 'Published' : 'Draft'}</div>
     </div>
   );
 
