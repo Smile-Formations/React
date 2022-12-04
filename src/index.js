@@ -1,5 +1,11 @@
+import React from 'react';
 import { createRoot } from 'react-dom/client';
 
-const element = <div>Hell Yeah!</div>;
+import Timer from './components/Timer';
+
 const root = createRoot(document.getElementById('root'));
-root.render(element);
+root.render(
+  <React.StrictMode>
+    <Timer />
+  </React.StrictMode>
+);
