@@ -19,7 +19,7 @@ Example:
 
 ---
 
-### Exercice
+### Exercise
 
 Create the `/track` route for creating a new track:
 
@@ -29,7 +29,7 @@ Create the `/track` route for creating a new track:
 
 ```jsx
 export function addTrack(track) {
-  return fetch('http://localhost:3001/articles', {
+  return fetch('http://localhost:3001/tracks', {
     body: JSON.stringify(track),
     headers: {'Content-Type': 'application/json'},
     method: 'POST'

@@ -41,7 +41,7 @@ Let’s create a `Filters` component that you will insert inside the `App` compo
 2. Move the state declaration inside the `App` component (lift the state up).
 3. Pass the state as a prop to the `Filters` component.
 4. Pass a function as a prop to the `Filters` component you will use to update the state from the `Filters` component.
-5. Filter the articles in the `App` component based on the filters stored in the state
+5. Filter the tracks in the `App` component based on the filters stored in the state
 
 <alert type="error">You should not store the filtered list of tracks in the state, because it is a computed value. (based on the original list of tracks and the filters that are already stored in the state.)</alert>
 
@@ -51,7 +51,7 @@ Let’s create a `Filters` component that you will insert inside the `App` compo
 
 To build your app correctly, you first need to think of the minimal set of mutable states that your app needs.
 
-To define if a data should be in the state or not, simply ask yourself three questions about each pieces of data:
+To define if a data should be in the state or not, simply ask yourself three questions about each piece of data:
 
 * Is it passed in from a parent via props? If so, it probably isn’t state.
 * Does it remain unchanged over time? If so, it probably isn’t state.

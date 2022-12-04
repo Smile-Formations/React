@@ -30,9 +30,9 @@ it('renders without crashing', () => {
 
 ### Mocks
 
-`jest.mock('../../services/article/article');` will replace the service with a mock that you provide in a `__mocks__` folder.
+`jest.mock('../../services/track/track');` will replace the service with a mock that you provide in a `__mocks__` folder.
 
-Exemple for the article service:
+Exemple for the track service:
 ```jsx
 export const getTracks = () =>
 Promise.resolve(/* Some static tracks */ );
@@ -120,7 +120,7 @@ it('renders without crashing', async () => {
   await act(async () => {
     render(<App />, div);
   });
-  const elements = div.querySelectorAll('.Article');
+  const elements = div.querySelectorAll('.JukeBox');
   expect(elements.length).toBe(3);
   unmountComponentAtNode(div);
   div.remove();
@@ -146,11 +146,11 @@ it('filters the tracks', async () => {
   await act(async () => {
     render(<App />, div);
   });
-  const input = container.querySelectorAll('[name=published]')[1];
+  const input = container.querySelectorAll('[name=band]')[1];
   await act(async () => {
-    input.dispatchEvent(new MouseEvent("click", {bubbles : true}));
+    input.dispatchEvent(new MouseEvent("change", {bubbles : true}));
   });
-  expect(div.querySelectorAll('.JukeBox').length).toBe(2);
+  expect(div.querySelectorAll('.JukeBox').length).toBe(3);
   unmountComponentAtNode(div);
   div.remove()
 });
@@ -175,7 +175,7 @@ describe('App component', () => {
 
 ### `beforeEach` and `afterEach`
 
-And you can define functions that will be run before an after each tests with `beforeEach` and `afterEach`:
+And you can define functions that will be run before an after each test with `beforeEach` and `afterEach`:
 ```jsx
 describe('App component', () => {
   let container = null;
@@ -249,9 +249,9 @@ jest.mock('../../services/category/category');
 
 it('renders without crashing', () => {
   render(<App />);
-  fireEvent.click(screen.getByLabelText('Published'));
+  fireEvent.click(screen.getByLabelText('Band'));
   const elements = await screen.findAllByText(/JukeBox/);
-  expect(elements.length).toBe(2);
+  expect(elements.length).toBe(3);
 });
 ```
 
@@ -264,8 +264,8 @@ You can test component callbacks by using a spy:
 it('should call onFilterChanged when filter changes', () => {
   const onFilterChanged = jest.fn();
   render(<Filters onFilterChanged={onFilterChanged} />);
-  fireEvent.click(screen.getByLabelText('Published'));
-  expect(onFilterChanged).toBeCalledWith('published', 'published');
+  fireEvent.click(screen.getByLabelText('Band'));
+  expect(onFilterChanged).toBeCalledWith('band', 'band');
 });
 ```
 
@@ -302,13 +302,17 @@ it('updates the tracks', async () => {
   const { result, waitForNextUpdate } = renderHook(() => useFilteredTracks());
   await waitForNextUpdate();
   act(() => result.current.setTracks([
-    {
-      "id": 1,
-      "title": "Christmas Song",
-      "category": 1,
-      "published": true,
-      "description": "Lorem ipsum dolor sit amet."
-    }
+      {
+          "id": 1,
+          "title": "Find The Real",
+          "album": "One Day Remains",
+          "band": "Alter Bridge",
+          "year": "2004",
+          "poster": "https://i.ebayimg.com/images/g/OqoAAOSwJYVg1y6E/s-l500.jpg",
+          "url": "https://www.youtube.com/watch?v=w9LZ0OkdxGg&ab_channel=AlterBridge-Topic",
+          "category": 3,
+          "description": "One Day Remains is the debut studio album by the American hard rock band Alter Bridge, released on August 10, 2004, on Wind-up Records."
+      }
   ]));
   expect(result.current.tracks.length).toEqual(1);
 });
@@ -344,5 +348,5 @@ describe('category service', () => {
 ```
 
 <!--
-The final solution can be found in `addon/solution_v1`
+The final solution can be found in `versions/v1`
 -->

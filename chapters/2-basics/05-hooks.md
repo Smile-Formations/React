@@ -10,7 +10,7 @@ layout: center
 
 ### Rules
 
-Hooks bring a lot of functionnality to function components like:
+Hooks bring a lot of functionality to function components like:
 
 * Local State
 * Effects
@@ -35,9 +35,9 @@ Main hooks are:
 
 ---
 
-### Additionnal hooks
+### Additional hooks
 
-Additionnal hooks are:
+Additional hooks are:
 
 * `useReducer`
 * `useCallback`

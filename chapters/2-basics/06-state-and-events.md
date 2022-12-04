@@ -131,7 +131,7 @@ When using a function, you will get the previous state value as parameter.
 
 ### Warning 1
 
-<alert type="warning">Updating the state is asynchronous so changes do not apply immediatly.</alert>
+<alert type="warning">Updating the state is asynchronous so changes do not apply immediately.</alert>
 
 It means this example is wrong: https://codepen.io/tonai/pen/BdLrPm?editors=0010
 
@@ -156,5 +156,5 @@ It means this example is wrong: https://codepen.io/tonai/pen/OJNmQeL?editors=001
 This example is now right: https://codepen.io/tonai/pen/gOrWebY?editors=0010
 
 <!--
-Mutation: The property of the article object is modified but not the article object itself. The article reference is still the same so there is no refresh.
+Mutation: The property of the track object is modified but not the track object itself. The track reference is still the same so there is no refresh.
 -->
