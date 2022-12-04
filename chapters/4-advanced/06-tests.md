@@ -32,5 +32,5 @@ it('should render the category title', () => {
 ```
 
 <!--
-The final solution can be found in `addon/solution_v3`
+The final solution can be found in `versions/v3`
 -->

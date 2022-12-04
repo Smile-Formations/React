@@ -10,7 +10,7 @@ layout: center
 
 ### A special prop
 
-For now we only use self closed components like:
+For now, we only use self closed components like:
 ```jsx
 <JukeBox />
 ```
@@ -29,6 +29,6 @@ This is equivalent to:
 
 ---
 
-### Exercice
+### Exercise
 
 Create a Container component to wrap the List component.
