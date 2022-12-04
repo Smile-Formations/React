@@ -41,7 +41,7 @@ function JukeBox(props) {
   // Destructing.
   const { track } = props;
   // Equivalent without destructuring:
-  // const article = props.article;
+  // const track = props.track;
 }
 ```
 
