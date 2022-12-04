@@ -19,7 +19,7 @@ describe('App component', () => {
     render(<TracksPage />, {wrapper: MemoryRouter});
     fireEvent.click(screen.getByLabelText('Band'));
     const elements = await screen.findAllByText(/Track [0-9]/);
-    expect(elements.length).toBe(2);
+    expect(elements.length).toBe(3);
   });
 
   it('removes one track', async () => {
