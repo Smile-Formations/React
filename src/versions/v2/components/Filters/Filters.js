@@ -4,7 +4,7 @@ import './Filters.css';
 
 function Filters(props) {
   const { categories, filters, onFilterChanged } = props;
-  const { category, published, title } = filters;
+  const { category, title } = filters;
   const inputRef = useRef();
 
   useEffect(() => {
@@ -29,20 +29,6 @@ function Filters(props) {
             <option key={category.id} value={category.id} >{category.title}</option>
           ))}
         </select>
-      </div>
-      <div className="Filters__cell">
-        <label className="Filters__label">
-          <input checked={published === ''} name="published" onChange={handleChange} type="radio" value="" />
-          All
-        </label>
-        <label className="Filters__label">
-          <input checked={published === 'published'} name="published" onChange={handleChange} type="radio" value="published" />
-          Published
-        </label>
-        <label className="Filters__label">
-          <input checked={published === 'draft'} name="published" onChange={handleChange} type="radio" value="draft" />
-          Draft
-        </label>
       </div>
     </div>
   );
