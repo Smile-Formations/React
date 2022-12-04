@@ -29,10 +29,10 @@ function TrackForm(props) {
         </div>
         <div className="TrackForm__row">
           <div className="TrackForm__cell">
-            <label htmlFor="content" >Content :</label>
+            <label htmlFor="description" >Description :</label>
           </div>
           <div className="TrackForm__cell">
-            <textarea id="content" name="content" onChange={handleChange} value={track.content} />
+            <textarea id="description" name="description" onChange={handleChange} value={track.description} />
           </div>
         </div>
         <div className="TrackForm__row">
