@@ -5,7 +5,7 @@ import Container from './Container';
 
 describe('Container component', () => {
   it('should render children', () => {
-    render(<Container><div>Hello world !</div></Container>);
-    expect(screen.getByText('Hello world !')).toBeInTheDocument();
+    render(<Container><div>Hell Yeah !</div></Container>);
+    expect(screen.getByText('Hell Yeah !')).toBeInTheDocument();
   });
 });
