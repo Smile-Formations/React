@@ -19,7 +19,7 @@ function TrackPage(props) {
 
   return (
     <div>
-      <Title linkProps={{ children: 'Back', to: '/' }} title={title}></Title>
+      <Title linkProps={{children: 'Back', to: '/'}} title={title}/>
       <Container>
         <TrackForm
           track={track}
@@ -44,7 +44,7 @@ function TrackPage(props) {
     } else {
       addTrack(track).then(track => navigate(`/track/${track.id}`));
     }
-  };
+  }
 }
 
 TrackPage.defaultProps = {
