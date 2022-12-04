@@ -10,7 +10,7 @@ layout: center
 
 ### Available variables
 
-By default you will have access to some environment variable like:
+By default, you will have access to some environment variable like:
 
 * `NODE_ENV`: Current environment
 * `PUBLIC_URL`: Relative URL of your app

@@ -14,7 +14,7 @@ Storybook is a development environment for `UI` components: https://github.com/s
 
 It enforces the pattern of splitting your components into `UI` and business components.
 
-Develop your businessless `UI` components and render them in storybook with different props combinations.
+Develop your business less `UI` components and render them in storybook with different props combinations.
 
 Re-use and wrap them with your business components in your final app.
 

@@ -32,16 +32,16 @@ In react, all (non static) list of components are managed this way.
 
 ---
 
-### Array of article
+### Array of tracks
 
 Update the `App` component to use the List component:
 
 1. Import the List component.
-2. Create an articles variable that is an array of tracks:
+2. Create a tracks variable that is an array of tracks:
 
 ```jsx
 const tracks = [
-  /* Add some articles */
+  /* Add some tracks */
 ];
 ```
 

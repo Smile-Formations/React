@@ -2,7 +2,7 @@
 layout: center
 ---
 
-## Delete article
+## Delete track
 
 <Toc maxDepth="2" mode="onlySiblings"/>
 
@@ -10,11 +10,11 @@ layout: center
 
 ### Exercise
 
-1. Create a method in track service to delete a track: `DELETE` http://localhost:3001/articles/:id
+1. Create a method in track service to delete a track: `DELETE` http://localhost:3001/tracks/:id
 
 ```jsx
 export function removeArticle(id) {
-  return fetch(`/articles/${id}`, {
+  return fetch(`http://localhost:3001/tracks/${id}`, {
     method: "DELETE",
   }).then((data) => data.json());
 }

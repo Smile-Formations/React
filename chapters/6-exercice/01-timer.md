@@ -27,5 +27,5 @@ Create a `Timer` component that displays:
 5. Add a text field that allow the user to set the step value.
 
 <!--
-The timer solution can be found in `addon/timer`
+The timer solution can be found in `exercise branch`
 -->

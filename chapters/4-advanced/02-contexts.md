@@ -50,7 +50,7 @@ You can use `useContext` to get a context value.
 
 `useContext` takes one argument:
 
-1. the context object.
+1. the object context.
 
 `useContext` returns the context value.
 

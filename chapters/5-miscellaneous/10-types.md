@@ -27,7 +27,6 @@ Example for the `Filters.jsx` component:
 Filters.propTypes = {
   filters: PropTypes.shape({
     category: PropTypes.string,
-    published: PropTypes.string,
     title: PropTypes.string
   }),
   onFilterChanged: PropTypes.func

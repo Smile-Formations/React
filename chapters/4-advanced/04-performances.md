@@ -15,7 +15,7 @@ Try the following scenario:
 1. Install React Developer Tools
 2. Go to Profiler tab
 3. Start the record
-4. Change fitlers
+4. Change filters
 5. End the record
 6. Check the result
 
@@ -36,7 +36,7 @@ To optimize this, you can wrap your components with the `memo` function before e
 import { memo } from 'React';
 
 function Example() {
-  return (<div>Hello world!</div>);
+  return (<div>Hell Yeah !</div>);
 }
 
 export default memo(Example);

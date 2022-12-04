@@ -2,7 +2,7 @@
 layout: center
 ---
 
-## Exercice
+## Exercise
 
 <Toc maxDepth="2" mode="onlySiblings"/>
 

@@ -13,8 +13,8 @@ layout: center
 We want our tracks to be loaded from an API.
 
 1. Install an API server.
-2. Add a state that will hold the loaded articles (what will trigger a new render).
-3. Add an effect to load the articles.
+2. Add a state that will hold the loaded tracks (what will trigger a new render).
+3. Add an effect to load the tracks.
 
 ---
 
@@ -22,7 +22,12 @@ We want our tracks to be loaded from an API.
 
 Install the `API`:
 
-1. Get the API server in `addon/api`.
+1. Get the API server.
+
+```bash
+git clone https://github.com/Smile-Formations/Smile-Radio-API
+```
+
 2. Install:
 
 ```bash
@@ -32,7 +37,7 @@ npm install
 3. Start:
 
 ```bash
-npm run start
+npm start
 ```
 
 The server should start and is listening on the 3001 port: http://localhost:3001
@@ -58,7 +63,7 @@ Example:
 }
 ```
 
-Then you can access the `API`, in dev mode, directly with the `/articles`.
+Then you can access the `API`, in dev mode, directly with the `/tracks`.
 
 ---
 
@@ -142,23 +147,23 @@ function Example({ count, onClick }) {
 <!--
 Example at https://codesandbox.io/s/184jv8nmpq.
 
-This exemple demonstrates that the effect is only executed when the dependencies changed.
+This example demonstrates that the effect is only executed when the dependencies changed.
 -->
 
 ---
 
-### Omiting dependencies
+### Omitting dependencies
 
 For logical and performance reasons, it is always better to specify the dependencies.
 
-You may omit a dependency if it does not references props, state, or values derived from them. (Example: if you use a constant or a function that is declared outside the component)
+You may omit a dependency if it does not reference props, state, or values derived from them. (Example: if you use a constant or a function that is declared outside the component)
 
-For a function used as dependency, you can omit it, if it is stable and does not references props, state, or values derived from them.
+For a function used as dependency, you can omit it, if it is stable and does not reference props, state, or values derived from them.
 
 `eslint` will warn you in the terminal if you missed some dependencies.
 
 <alert>
-Omitting dependency is strictly optionnal.  
+Omitting dependency is strictly optional.  
 It will cause no harm to add a dependency that never changes in the array of dependencies
 </alert>
 
@@ -206,15 +211,15 @@ It also demonstrates that the cleanup function is executed when the component is
 
 ---
 
-### Exercice
+### Exercise
 
-Now in the `App` component, add a state for the articles and an effect in which you will fetch the articles at http://localhost:3001/articles:
+Now in the `App` component, add a state for the tracks and an effect in which you will fetch the tracks at http://localhost:3001/tracks:
 ```jsx
 useEffect(() => {
-  fetch('/articles')
+  fetch('http://localhost:3001/tracks')
     .then(data => data.json())
-    .then(articles => setArticles(articles));
-}, [setArticles]);
+    .then(tracks => setTracks(tracks));
+}, [setTracks]);
 ```
 
 <alert>Don’t forget the dependencies !</alert>

@@ -35,6 +35,6 @@ formatNumber(9_999_999.9900);
 
 ---
 
-### Exercice
+### Exercise
 
 Here create an `track.js` in a "services" folder that will manage the communication with the server.
