@@ -25,5 +25,5 @@ it('renders without crashing', () => {
 ```
 
 <!--
-The final solution can be found in `addon/solution_v2`
+The final solution can be found in `versions/v2`
 -->
