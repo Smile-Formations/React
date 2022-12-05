@@ -6,6 +6,8 @@ import TrackPage from '../TrackPage/TrackPage';
 import TracksPage from '../TracksPage/TracksPage';
 import Layout from '../Layout/Layout';
 
+import "./App.css";
+
 function App() {
     const categories = useCategories();
 
