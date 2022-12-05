@@ -3,7 +3,9 @@ import JukeBox from '../JukeBox/JukeBox';
 import './List.css';
 
 function List(props) {
+
   const { tracks, categories } = props;
+
   return (
     <div className="List">
       {tracks.map(track => (

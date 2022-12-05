@@ -8,6 +8,7 @@ import Container from '../Container/Container';
 import Title from '../Title/Title';
 
 function TrackPage(props) {
+
   const { categories } = props;
   const navigate = useNavigate();
   const { id } = useParams();
