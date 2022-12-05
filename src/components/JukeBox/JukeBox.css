@@ -1,3 +1,7 @@
 .JukeBox {
     background-color: #3C3C3C;
 }
+
+.JukeBox.isSelected {
+    background-color: #191919;
+}
