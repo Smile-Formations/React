@@ -54,9 +54,9 @@ Example with multiples attributes:
 // Example.js
 function Example(props) {
   const { foo, bar, baz } = props;
-  console.log(foo); // 'bar' (string)
+  console.log(foo); // 'foo' (string)
   console.log(bar); // 42 (number)
-  console.log(baz); // content of sthe omeVar variable
+  console.log(baz); // content of the someVar variable
   return null;
 }
 export default Example;
