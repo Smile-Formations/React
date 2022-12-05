@@ -14,17 +14,20 @@ function Filters(props) {
   return (
     <div className="Filters">
       <div className="Filters__cell">
+        <label className="Filters__label" htmlFor='title'>Search</label>
         <input
           name="title"
           onChange={handleChange}
           type="text"
           ref={inputRef}
           value={title}
+          placeholder="Search by track title"
         />
       </div>
       <div className="Filters__cell" >
+        <label className="Filters__label" htmlFor='category'>Category</label>
         <select name="category" onChange={handleChange} value={category} >
-          <option value="" />
+          <option value="" >All</option>
           {categories.map(category => (
             <option key={category.id} value={category.id} >{category.title}</option>
           ))}
