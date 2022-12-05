@@ -5,6 +5,7 @@ import logo from '../../logo.png';
 import './Header.css';
 
 function Header() {
+
   return (
     <div className="Header" >
       <div className="Header__container">
@@ -13,7 +14,7 @@ function Header() {
         </Link>
         <ul className="Header__list" >
           <li className="Header__item" >
-            <span className="Header__link">Home</span>
+            <Link className="Header__link">My Radio</Link>
           </li>
         </ul>
       </div>
