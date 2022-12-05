@@ -5,6 +5,8 @@ import Container from '../Container/Container';
 import Filters from '../Filters/Filters';
 import List from '../List/List';
 
+import './App.css';
+
 function App() {
   const categories = useCategories();
   const { tracks, filters, setFilters } = useFilteredTracks();
