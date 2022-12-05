@@ -17,25 +17,28 @@ function Filters(props) {
   }, []);
 
   return (
-    <div className="Filters">
-      <div className="Filters__cell">
-        <input
-          name="title"
-          onChange={handleChange}
-          type="text"
-          ref={inputRef}
-          value={title}
-        />
+      <div className="Filters">
+        <div className="Filters__cell">
+          <label className="Filters__label" htmlFor='title'>Search</label>
+          <input
+              name="title"
+              onChange={handleChange}
+              type="text"
+              ref={inputRef}
+              value={title}
+              placeholder="Search by track title"
+          />
+        </div>
+        <div className="Filters__cell" >
+          <label className="Filters__label" htmlFor='category'>Category</label>
+          <select name="category" onChange={handleChange} value={category} >
+            <option value="" >All</option>
+            {categories.map(category => (
+                <option key={category.id} value={category.id} >{category.title}</option>
+            ))}
+          </select>
+        </div>
       </div>
-      <div className="Filters__cell" >
-        <select name="category" onChange={handleChange} value={category} >
-          <option value="" />
-          {categories.map(category => (
-            <option key={category.id} value={category.id} >{category.title}</option>
-          ))}
-        </select>
-      </div>
-    </div>
   );
 
   function handleChange(event) {

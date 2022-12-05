@@ -11,6 +11,8 @@ import { useCategories } from "../../hooks/useCategories/useCategories";
 
 import Layout from "../Layout/Layout";
 
+import "./App.css";
+
 const TrackPage = lazy(() => import("../TrackPage/TrackPage"));
 const TracksPage = lazy(() => import("../TracksPage/TracksPage"));
 const About = lazy(() => import("../About/About"));

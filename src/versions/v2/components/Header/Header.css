@@ -1,16 +1,19 @@
-body {
-  margin: 0;
-}
-
 .Header {
   background-color: #222;
+}
+
+.Header__container {
+  width: 100%;
+  max-width: 800px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .Header__list {
   list-style-type: none;
   padding: 0;
-  width: 800px;
-  margin: 0 auto;
 }
 
 .Header__item {
@@ -21,11 +24,12 @@ body {
   display: block;
   padding: 5px;
   background-color: #222222;
-  color: #00d8ff;
+  color: #D07854;
   text-decoration: none;
   font-size: 20px;
   font-weight: bold;
   font-family: sans-serif;
+  cursor: pointer;
 }
 
 .Header__image {

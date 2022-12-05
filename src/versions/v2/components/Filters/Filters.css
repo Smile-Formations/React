@@ -1,20 +1,28 @@
 .Filters {
-  display: table-row;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
 }
 
 .Filters__cell {
-  display: table-cell;
+  display: flex;
+  flex-direction: column;
   padding: 5px 10px;
-  text-align: center;
   position: relative;
 }
 
-.Filters__cell::before {
-  content: '|';
-  position: absolute;
-  left: 0;
+.Filters__cell:first-of-type {
+  width: 70%;
 }
 
-.Filters__cell:first-child::before {
-  display: none;
+.Filters__cell:last-of-type {
+  width: 30%;
+}
+
+.Filters__label {
+  font-size: 14px;
+  opacity: 0.5;
+  margin-bottom: 4px;
 }
