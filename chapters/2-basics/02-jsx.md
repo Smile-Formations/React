@@ -48,7 +48,7 @@ To use this newly created component, update `index.js`:
 ```jsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import JukeBox from './components/JukeBox/JukeBox.jsx';
+import JukeBox from './components/JukeBox/JukeBox';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
