@@ -1,8 +1,11 @@
 import { useCategories } from '../../hooks/useCategories/useCategories';
 import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
+
 import Container from '../Container/Container';
 import Filters from '../Filters/Filters';
 import List from '../List/List';
+
+import './App.css';
 
 function App() {
   const categories = useCategories();
