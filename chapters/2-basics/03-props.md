@@ -15,7 +15,7 @@ Create a new `App` component and:
 1. import the previously created component:
 
 ```jsx
-import Article from '../JukeBox/JukeBox';
+import JukeBox from '../JukeBox/JukeBox';
 ```
 
 2. Move the `track` variable from `JukeBox` inside this component (inside the component function).
