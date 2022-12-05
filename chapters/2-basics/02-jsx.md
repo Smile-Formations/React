@@ -66,7 +66,7 @@ It should detect your modifications, re-build and reload the page.
 
 ### Interpolation
 
-In `JukeBox.js`, we’ll initialize the component with some article data:
+In `JukeBox.js`, we’ll initialize the component with some track data:
 ```jsx
 const track = {
     "id": 1,
