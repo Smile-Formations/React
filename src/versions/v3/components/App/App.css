@@ -13,6 +13,10 @@ html, body {
     font-size: 16px;
 }
 
+main {
+    padding-top: 80px
+}
+
 input, select {
     background-color: #191919;
     border: 1px solid #3c3c3c;
@@ -32,4 +36,16 @@ option {
     font-style: italic;
     font-size: 14px;
     opacity: 0.5;
+}
+
+textarea {
+    background-color: #191919;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    height: 100px;
+    padding: 5px 10px;
+    outline: none;
+    color: inherit;
+    font-size: 14px;
+    resize: none;
 }

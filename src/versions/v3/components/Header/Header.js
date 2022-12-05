@@ -14,12 +14,10 @@ function Header() {
                 </Link>
                 <ul className="Header__list" >
                     <li className="Header__item" >
-                        <span className="Header__link">Home</span>
+                        <Link className="Header__link" to="/">My Radio</Link>
                     </li>
                     <li className="Header__item" >
-                        <Link className="Header__link" to="/about" >
-                            <span>About</span>
-                        </Link>
+                        <Link className="Header__link" to="/about">About</Link>
                     </li>
                 </ul>
             </div>

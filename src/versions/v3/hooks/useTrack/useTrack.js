@@ -6,7 +6,12 @@ export function useTrack(trackId) {
   const [track, setTrack] = useState({
     category: 0,
     description: '',
-    title: ''
+    title: '',
+    url: '',
+    band: '',
+    year: '',
+    poster: '',
+    album: ''
   });
 
   useEffect(() => {

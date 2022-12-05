@@ -8,7 +8,7 @@ import Filters from '../Filters/Filters';
 import List from '../List/List';
 import Title from '../Title/Title';
 
-const title = 'Tracks';
+const title = 'My Radio';
 const linkProps = { children: 'Add new track', to: '/track' };
 
 function TracksPage() {

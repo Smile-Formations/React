@@ -7,7 +7,9 @@ function Layout()  {
     return (
         <Suspense fallback="Loading...">
             <Header/>
-            <Outlet/>
+            <main>
+                <Outlet/>
+            </main>
         </Suspense>
     );
 }

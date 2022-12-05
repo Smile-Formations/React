@@ -1,14 +1,17 @@
 .Title {
   text-align: right;
   position: relative;
-  width: 700px;
-  margin: 10px auto;
+  width: 100%;
+  max-width: 800px;
+  margin: 40px auto 10px;
+  color: #D07854;
 }
 
 .Title__title {
   position: absolute;
   margin: 0;
-  font-size: 20px;
+  top: -5px;
+  font-size: 30px;
   text-align: center;
   width: 100%;
 }
@@ -16,13 +19,17 @@
 .Title__button {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #ddd;
+  background-color: #D07854;
   color: #000;
   text-decoration: none;
   border-radius: 5px;
   position: relative;
+  border: 1px solid #D07854;
+  transition: all linear 0.15s
 }
 
 .Title__button:hover {
-  background-color: #ccc;
+  background-color: #141414;
+  border: 1px solid #D07854;
+  color: #D07854;
 }
