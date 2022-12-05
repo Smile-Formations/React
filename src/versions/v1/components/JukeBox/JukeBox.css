@@ -1,0 +1,75 @@
+.JukeBox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.JukeBox.isSelected {
+  background-color: #141414;
+}
+
+.JukeBox__cell {
+  display: flex;
+  padding: 0 10px;
+}
+
+a.JukeBox__sub-cell {
+  background-color: #000;
+  height: 35px;
+  width: 35px;
+  margin-right: 10px;
+  border-radius: 4px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border: 1px solid #3c3c3c;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.JukeBox__sub-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.JukeBox__details {
+  font-size: 12px;
+  opacity: 0.5;
+}
+
+.JukeBox__cell:last-of-type {
+  font-size: 12px;
+  opacity: 0.5;
+  border-radius: 50px;
+  border: 1px solid #3c3c3c;
+  padding: 5px 10px;
+  background-color: #141414;
+}
+
+.JukeBox:not(:last-of-type) {
+  border-bottom: 1px solid #3c3c3c;
+}
+
+.JukeBox__sub-cell__icon {
+  width: 20px;
+  height: 20px;
+  background-color: #141414;
+  border-radius: 40px;
+  border: 1px solid #fff;
+  transform-origin: 50% 50%;
+  transform: scale(1);
+  transition: transform linear 0.15s
+}
+
+.JukeBox__sub-cell__icon:hover {
+  transform: scale(1.2);
+}
+
+.JukeBox__sub-cell__icon path {
+  fill: #fff;
+}
