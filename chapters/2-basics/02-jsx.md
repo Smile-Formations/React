@@ -96,7 +96,7 @@ And update the `HTML` the component is returning:
 Next create some `CSS`:
 
 1. Create a `JukeBox.css` file
-2. And import it in the `JukeBox.jsx` file:
+2. And import it in the `JukeBox.js` file:
 
 ```jsx
 import './JukeBox.css';
