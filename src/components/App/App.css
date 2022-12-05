@@ -1,4 +1,46 @@
-body {
-    background-color: #141414;
-    color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #191919;
+    color: #f1f1f1;
+    font-family: Montserrat;
+    font-size: 16px;
+}
+
+input, select {
+    background-color: #191919;
+    border: 1px solid #3c3c3c;
+    border-radius: 6px;
+    height: 35px;
+    padding: 5px 10px;
+    outline: none;
+    color: inherit;
+    font-size: 14px;
+}
+
+option {
+    font-size: 14px;
+}
+
+::placeholder {
+    font-style: italic;
+    font-size: 14px;
+    opacity: 0.5;
+}
+
+.App__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 10px;
+    width: 100%;
+    max-width: 800px;
+    margin: 10px auto;
 }

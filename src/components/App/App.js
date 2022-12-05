@@ -1,23 +1,33 @@
-import List from "../List/List";
-import "./App.css"
-import {useEffect, useState} from "react";
-import {getTracks} from "../../services/track/track";
-import {useCategories} from "../../hooks/useCategories/useCategories";
+import { useCategories } from '../../hooks/useCategories/useCategories';
+import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
+
+import Filters from '../Filters/Filters';
+import List from '../List/List';
+
+import './App.css';
 
 function App() {
 
-    const [tracks, setTracks] = useState([]);
     const categories = useCategories();
-
-    console.log(categories);
-
-    useEffect(() => {
-        getTracks().then(tracks => setTracks(tracks));
-    }, []);
+    const { tracks, filters, setFilters } = useFilteredTracks();
 
     return (
-        <List tracks={tracks} />
+        <div className="App__container">
+            <Filters
+                categories={categories}
+                filters={filters}
+                onFilterChanged={handleFilterChanged}
+            />
+            <List
+                tracks={tracks}
+                categories={categories}
+            />
+        </div>
     );
+
+    function handleFilterChanged(filter, value) {
+        setFilters((prevState) => ({...prevState, [filter]: value}));
+    }
 }
 
 export default App;

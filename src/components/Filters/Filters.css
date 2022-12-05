@@ -1,0 +1,28 @@
+.Filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.Filters__cell {
+    display: flex;
+    flex-direction: column;
+    padding: 5px 10px;
+    position: relative;
+}
+
+.Filters__cell:first-of-type {
+    width: 70%;
+}
+
+.Filters__cell:last-of-type {
+    width: 30%;
+}
+
+.Filters__label {
+    font-size: 14px;
+    opacity: 0.5;
+    margin-bottom: 4px;
+}

@@ -1,17 +1,21 @@
-import JukeBox from "../JukeBox/JukeBox";
-import "./List.css"
+import JukeBox from '../JukeBox/JukeBox';
+
+import './List.css';
 
 function List(props) {
-
-    const { tracks } = props;
-
+    const { tracks, categories } = props;
     return (
         <div className="List">
             {tracks.map(track => (
-                <JukeBox track={track} key={track.id} />
+                <JukeBox track={track} categories={categories} key={track.id} />
             ))}
         </div>
     );
 }
+
+List.defaultProps = {
+    tracks: [],
+    categories: []
+};
 
 export default List;
