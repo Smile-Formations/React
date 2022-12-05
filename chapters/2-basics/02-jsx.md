@@ -10,7 +10,7 @@ layout: center
 
 ### `JukeBox` component
 
-We will develop an application that manages articles.
+We will develop an application that manages tracks.
 
 We will begin with an `JukeBox` component:
 
