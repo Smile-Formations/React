@@ -1,20 +1,21 @@
-import React from "react";
 import "./ControlButtons.css";
 
 export default function ControlButtons(props) {
+
     const StartButton = (
-        <div className="btn btn-one btn-start"
+        <div className="ControlButtons__btn ControlButtons__btn-one ControlButtons__btn-start"
              onClick={props.handleStart}>
             Start
         </div>
     );
+
     const ActiveButtons = (
-        <div className="btn-grp">
-            <div className="btn btn-two"
+        <div className="ControlButtons__btn-grp">
+            <div className="ControlButtons__btn ControlButtons__btn-two"
                  onClick={props.handleReset}>
                 Reset
             </div>
-            <div className="btn btn-one"
+            <div className="ControlButtons__btn ControlButtons__btn-one"
                  onClick={props.handlePauseResume}>
                 {props.isPaused ? "Resume" : "Pause"}
             </div>
@@ -22,7 +23,7 @@ export default function ControlButtons(props) {
     );
 
     return (
-        <div className="Control-Buttons">
+        <div className="ControlButtons">
             <div>{props.active ? ActiveButtons : StartButton}</div>
         </div>
     );
