@@ -73,3 +73,39 @@ a.JukeBox__sub-cell {
 .JukeBox__sub-cell__icon path {
   fill: #fff;
 }
+
+.JukeBox__Title {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.JukeBox__actions {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 10px;
+}
+
+.JukeBox__link {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  margin-right: 5px;
+}
+
+.JukeBox__svg {
+  width: 100%;
+  height: 100%;
+}
+
+.JukeBox__edit path {
+  fill: #D07854
+}
+
+.JukeBox__bin path {
+  fill: firebrick;
+}

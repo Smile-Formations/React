@@ -14,6 +14,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<TracksPage/>} />
                 <Route path="/track" element={<TrackPage categories={categories}/>} />
+                <Route path="/track/:id" element={<TrackPage categories={categories} />}/>
             </Routes>
         </BrowserRouter>
     );
