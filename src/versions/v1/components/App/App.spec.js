@@ -15,7 +15,7 @@ describe('App component', () => {
 
   it('filters the articles', async () => {
     render(<App />);
-    fireEvent.click(screen.getByLabelText('Band'));
+    fireEvent.click(screen.getByLabelText(/Band/));
     const elements = await screen.findAllByText(/Track [0-9]/);
     expect(elements.length).toBe(2);
   });
