@@ -14,6 +14,18 @@
     border: 3px solid #3c3c3c;
     border-radius: 6px 6px 20px 20px;
     box-shadow: 4px 8px 8px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transform-origin: 50% 50%;
+    transform: scale(1);
+    transition: transform linear 0.15s;
+}
+
+.ControlButtons__btn-start-reset:hover {
+    transform: scale(1.1);
+}
+
+.ControlButtons__btn-pause-resume.active:hover, .ControlButtons__btn-pause-resume.active.resume {
+    transform: scale(1.1) rotate(-47deg);
 }
 
 .ControlButtons__btn-start-reset {
@@ -40,4 +52,22 @@
     border-left: 3px solid #3c3c3c;
     border-right: 3px solid #3c3c3c;
     background-color: #111111;
+}
+
+.ControlButtons__btn-pause-resume:not(.active), .ControlButtons__btn-pause-resume:not(.active) > div {
+    background-color: #000;
+    border-color: #000;
+}
+
+.ControlButtons__btn-start-reset.active, .ControlButtons__btn-start-reset.active > div {
+    background-color: #7E0804;
+    transform: scale(1.2);
+}
+
+.ControlButtons__btn-start-reset.active > div {
+    top: -24px;
+}
+
+.ControlButtons__btn-pause-resume.resume.active, .ControlButtons__btn-pause-resume.resume.active > div {
+    background-color: #8C3015;
 }
