@@ -33,10 +33,7 @@ function TrackPage(props) {
   );
 
   function handleTrackChange(name, value) {
-    setTrack(prevState => ({
-      ...prevState,
-      [name]: value
-    }));
+    setTrack(prevState => ({...prevState, [name]: value }));
   }
 
   function handleSubmit() {

@@ -31,10 +31,7 @@ function TracksPage(props) {
   );
 
   function handleFilterChanged(filter, value) {
-    setFilters((prevState) => ({
-      ...prevState,
-      [filter]: value,
-    }));
+    setFilters((prevState) => ({...prevState, [filter]: value }));
   }
 
   function handleRemove (id) {
