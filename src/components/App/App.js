@@ -9,7 +9,6 @@ function App() {
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<TracksPage/>} />
-                <Route path="/track" element={<TrackPage categories={categories} />}/>
             </Routes>
         </BrowserRouter>
     );
