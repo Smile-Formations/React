@@ -40,4 +40,12 @@ describe('track service', () => {
     expect(fetch.mock.calls[0][0]).toEqual('/tracks/42');
     expect(fetch.mock.calls[0][1].method).toEqual('PUT');
   });
+
+  it('removeTrack', async () => {
+    fetch.mockResponseOnce(JSON.stringify({}));
+    await removeTrack(42);
+    // expect(fetch).toHaveBeenCalledWith('/tracks/42');
+    expect(fetch.mock.calls[0][0]).toEqual('/tracks/42');
+    expect(fetch.mock.calls[0][1].method).toEqual('DELETE');
+  });
 });

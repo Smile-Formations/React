@@ -1,19 +1,25 @@
 import {useCategories} from "../../hooks/useCategories/useCategories";
 import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
+import { removeTrack } from '../../services/track/track';
 
 import Container from '../Container/Container';
 import Filters from '../Filters/Filters';
 import List from '../List/List';
 
 import './TracksPage.css';
-import {Link} from "react-router-dom";
 import Title from "../Title/Title";
+import {useCallback} from "react";
 
 const title = 'My Radio';
 
 function TracksPage() {
     const categories = useCategories();
-    const { tracks, filters, setFilters } = useFilteredTracks();
+    const { tracks, filters, setFilters, setTracks } = useFilteredTracks();
+
+    const handleRemove = useCallback((id) => {
+        removeTrack(id)
+            .then(() => setTracks(prevState => prevState.filter(track => track.id !== id)));
+    }, [setTracks]);
 
     return (
         <Container>
@@ -26,6 +32,7 @@ function TracksPage() {
             <List
                 tracks={tracks}
                 categories={categories}
+                onRemove={handleRemove}
             />
         </Container>
     );
@@ -35,6 +42,8 @@ function TracksPage() {
         // console.log(filter);
         setFilters((prevState) => ({...prevState, [filter]: value }));
     }
+
+
 }
 
 export default TracksPage;

@@ -17,5 +17,5 @@ export function useFilteredTracks() {
     .filter(track => !filters.title || track.title.toLowerCase().indexOf(filters.title.toLowerCase()) !== -1)
     .filter(track => !filters.category || track.category === Number(filters.category))
 
-  return { tracks: filteredTracks, filters, setFilters };
+  return { tracks: filteredTracks, filters, setTracks, setFilters };
 }

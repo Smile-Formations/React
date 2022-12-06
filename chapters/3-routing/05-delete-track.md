@@ -13,7 +13,7 @@ layout: center
 1. Create a method in track service to delete a track: `DELETE` http://localhost:3001/tracks/:id
 
 ```jsx
-export function removeArticle(id) {
+export function removeTrack(id) {
   return fetch(`http://localhost:3001/tracks/${id}`, {
     method: "DELETE",
   }).then((data) => data.json());

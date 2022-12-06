@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate  } from 'react-router-dom';
 
 import { useTrack } from '../../hooks/useTrack/useTrack';
 import { addTrack, updateTrack } from '../../services/track/track';
@@ -11,6 +11,7 @@ function TrackPage(props) {
 
     const { categories } = props;
     const { id } = useParams();
+    const navigate = useNavigate();
     const [track, setTrack] = useTrack(id);
 
     const title = id
@@ -37,7 +38,7 @@ function TrackPage(props) {
         if (id) {
             updateTrack(track);
         } else {
-            addTrack(track);
+            addTrack(track).then(track => navigate(`/track/${track.id}`));
         }
     }
 }
