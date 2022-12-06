@@ -14,7 +14,6 @@ Let’s add some filters:
 
 * A text input to filter on the title
 * A select to filter on the category
-* Radio buttons to filter on the published status
 
 ---
 

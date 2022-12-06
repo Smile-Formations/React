@@ -23,7 +23,7 @@ This is a powerful features to externalize and share business logic.
 ### Exercise
 
 1. Inside src create a hooks directory
-2. Inside hooks create a useTracks file
+2. Inside hooks create a useCategories folder and a useCategories.js file
 3. Try to extract the categories loading logic from the App component into a custom hook
 
 <!--

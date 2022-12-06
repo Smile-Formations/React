@@ -10,7 +10,7 @@ layout: center
 
 ### `JukeBox` component
 
-We will develop an application that manages articles.
+We will develop an application that manages tracks.
 
 We will begin with an `JukeBox` component:
 
@@ -48,7 +48,7 @@ To use this newly created component, update `index.js`:
 ```jsx
 import React from 'react';
 import { createRoot } from 'react-dom/client';
-import JukeBox from './components/JukeBox/JukeBox.jsx';
+import JukeBox from './components/JukeBox/JukeBox';
 
 const root = createRoot(document.getElementById('root'));
 root.render(
@@ -66,7 +66,7 @@ It should detect your modifications, re-build and reload the page.
 
 ### Interpolation
 
-In `JukeBox.js`, we’ll initialize the component with some article data:
+In `JukeBox.js`, we’ll initialize the component with some track data:
 ```jsx
 const track = {
     "id": 1,
@@ -96,7 +96,7 @@ And update the `HTML` the component is returning:
 Next create some `CSS`:
 
 1. Create a `JukeBox.css` file
-2. And import it in the `JukeBox.jsx` file:
+2. And import it in the `JukeBox.js` file:
 
 ```jsx
 import './JukeBox.css';
