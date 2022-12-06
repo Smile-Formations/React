@@ -26,6 +26,8 @@ function App() {
     );
 
     function handleFilterChanged(filter, value) {
+        // Mettre filter entre [] permet à JS d'interpréter la string issue de filter comme une clé de l'objet JSON
+        // console.log(filter);
         setFilters((prevState) => ({...prevState, [filter]: value}));
     }
 }
