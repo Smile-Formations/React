@@ -1,4 +1,4 @@
-import { useCategories } from '../../hooks/useCategories/useCategories';
+import {useCategories} from "../../hooks/useCategories/useCategories";
 import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
 
 import Container from '../Container/Container';
