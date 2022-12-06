@@ -4,7 +4,6 @@ import classnames from 'classnames';
 import './JukeBox.css';
 
 function JukeBox(props) {
-
     const { track, categories } = props;
     const [selected, setSelected] = useState(false);
 
