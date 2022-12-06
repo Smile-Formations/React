@@ -38,7 +38,7 @@ To defines routes you need to use following components (import them from `react-
 
 ```jsx
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import TracksPage from '../TracksPage/TracksPage.jsx';
+import TracksPage from '../TracksPage/TracksPage';
 
 function App() {
   return (
