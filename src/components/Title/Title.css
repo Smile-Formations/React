@@ -1,9 +1,8 @@
 .Title {
   text-align: right;
-  position: relative;
   width: 100%;
   max-width: 800px;
-  margin: 40px auto 10px;
+  margin: 10px auto;
   color: #D07854;
 }
 

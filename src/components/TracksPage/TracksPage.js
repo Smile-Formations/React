@@ -13,21 +13,19 @@ function TracksPage(props) {
   const { tracks, filters, setTracks, setFilters } = useFilteredTracks();
 
   return (
-    <div>
-      <Title linkProps={{children: 'Add new track', to: '/track'}} title={title}/>
       <Container>
-        <Filters
-          categories={categories}
-          filters={filters}
-          onFilterChanged={handleFilterChanged}
-        />
-        <List
-          tracks={tracks}
-          categories={categories}
-          onRemove={handleRemove}
-        />
+          <Title linkProps={{children: 'Add new track', to: '/track'}} title={title}/>
+          <Filters
+            categories={categories}
+            filters={filters}
+            onFilterChanged={handleFilterChanged}
+          />
+          <List
+            tracks={tracks}
+            categories={categories}
+            onRemove={handleRemove}
+          />
       </Container>
-    </div>
   );
 
   function handleFilterChanged(filter, value) {

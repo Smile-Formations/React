@@ -19,17 +19,15 @@ function TrackPage(props) {
     : 'Add new track';
 
   return (
-    <div>
-      <Title linkProps={{children: 'Back', to: '/'}} title={title}/>
       <Container>
-        <TrackForm
-          track={track}
-          categories={categories}
-          onTrackChange={handleTrackChange}
-          onSubmit={handleSubmit}
-        />
+          <Title linkProps={{children: 'Back', to: '/'}} title={title}/>
+          <TrackForm
+            track={track}
+            categories={categories}
+            onTrackChange={handleTrackChange}
+            onSubmit={handleSubmit}
+          />
       </Container>
-    </div>
   );
 
   function handleTrackChange(name, value) {
