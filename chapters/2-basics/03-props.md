@@ -15,7 +15,7 @@ Create a new `App` component and:
 1. import the previously created component:
 
 ```jsx
-import Article from '../JukeBox/JukeBox.jsx';
+import JukeBox from '../JukeBox/JukeBox';
 ```
 
 2. Move the `track` variable from `JukeBox` inside this component (inside the component function).
@@ -45,7 +45,7 @@ function JukeBox(props) {
 }
 ```
 
-Exemple with multiples attributes:
+Example with multiples attributes:
 ```jsx
 <Example foo="foo" bar={42} baz={someVar} />
 ```
@@ -54,9 +54,9 @@ Exemple with multiples attributes:
 // Example.js
 function Example(props) {
   const { foo, bar, baz } = props;
-  console.log(foo); // 'bar' (string)
+  console.log(foo); // 'foo' (string)
   console.log(bar); // 42 (number)
-  console.log(baz); // content of sthe omeVar variable
+  console.log(baz); // content of the someVar variable
   return null;
 }
 export default Example;
