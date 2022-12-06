@@ -10,7 +10,7 @@ layout: center
 
 ### Goal
 
-We want our articles to be selectable:
+We want our tracks to be selectable:
 
 1. Add a `selected` state inside the `JukeBox` component using the `useState` hook.
 2. Add a `isSelected` `HTML` class in the rendering of the `JukeBox` component.

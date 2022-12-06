@@ -10,7 +10,7 @@ layout: intro
 layout: center
 ---
 
-## Timer
+## Stopwatch
 
 <Toc maxDepth="2" mode="onlySiblings"/>
 
@@ -18,14 +18,14 @@ layout: center
 
 ### Instructions
 
-Create a `Timer` component that displays:
+Create a `Stopwatch` application that displays:
 
-1. The current timer value (start at 0).
+1. The current timer value (start at 00:00.00).
 2. A button to start the timer.
-3. A button to stop and reset the timer to 0.
+3. A button to stop and reset the timer to 00:00.00.
 4. Add a pause button.
 5. Add a text field that allow the user to set the step value.
 
 <!--
-The timer solution can be found in `exercise branch`
+The stopwatch solution can be found in `exercise branch`
 -->
