@@ -7,6 +7,9 @@ import List from '../List/List';
 
 import './TracksPage.css';
 import {Link} from "react-router-dom";
+import Title from "../Title/Title";
+
+const title = 'My Radio';
 
 function TracksPage() {
     const categories = useCategories();
@@ -14,9 +17,7 @@ function TracksPage() {
 
     return (
         <Container>
-            <Link to="/track">
-                <span className="TracksPage__button">Add new track</span>
-            </Link>
+            <Title linkProps={{children: 'Add new track', to: '/track'}} title={title}/>
             <Filters
                 categories={categories}
                 filters={filters}
