@@ -24,7 +24,6 @@ Create a `Stopwatch` application that displays:
 2. A button to start the timer.
 3. A button to stop and reset the timer to 00:00.00.
 4. Add a pause button.
-5. Add a text field that allow the user to set the step value.
 
 <!--
 The stopwatch solution can be found in `exercise branch`
