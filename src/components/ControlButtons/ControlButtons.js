@@ -3,9 +3,8 @@ import "./ControlButtons.css";
 export default function ControlButtons(props) {
 
     const StartButton = (
-        <div className="ControlButtons__btn ControlButtons__btn-one ControlButtons__btn-start"
-             onClick={props.handleStart}>
-            Start
+        <div className="ControlButtons__btn-start" onClick={props.handleStart}>
+            <div/>
         </div>
     );
 

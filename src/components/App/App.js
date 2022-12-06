@@ -3,7 +3,7 @@ import StopWatch from "../StopWatch/StopWatch";
 
 function App() {
     return (
-        <div className="App">
+        <div className="App" style={{backgroundImage: `url(/assets/bg.jpg)`}}>
             <StopWatch />
         </div>
     );
