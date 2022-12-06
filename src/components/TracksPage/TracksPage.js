@@ -8,7 +8,6 @@ import List from '../List/List';
 
 import './TracksPage.css';
 import Title from "../Title/Title";
-import {useCallback} from "react";
 
 const title = 'My Radio';
 
@@ -16,10 +15,9 @@ function TracksPage() {
     const categories = useCategories();
     const { tracks, filters, setFilters, setTracks } = useFilteredTracks();
 
-    const handleRemove = useCallback((id) => {
-        removeTrack(id)
-            .then(() => setTracks(prevState => prevState.filter(track => track.id !== id)));
-    }, [setTracks]);
+    const handleRemove = (id) => {
+        removeTrack(id).then(() => setTracks(prevState => prevState.filter(track => track.id !== id)));
+    }
 
     return (
         <Container>
