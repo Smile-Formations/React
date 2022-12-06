@@ -26,10 +26,7 @@ function App() {
   );
 
   function handleFilterChanged(filter, value) {
-    setFilters((prevState) => ({
-      ...prevState,
-      [filter]: value,
-    }));
+    setFilters((prevState) => ({...prevState, [filter]: value }));
   }
 }
 
