@@ -2,7 +2,7 @@ import { useCategories } from '../../hooks/useCategories/useCategories';
 import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
 
 import Filters from '../Filters/Filters';
-import List from '../List/List';
+import Container from '../Container/Container';
 
 import './App.css';
 
@@ -18,10 +18,7 @@ function App() {
                 filters={filters}
                 onFilterChanged={handleFilterChanged}
             />
-            <List
-                tracks={tracks}
-                categories={categories}
-            />
+            <Container />
         </div>
     );
 
