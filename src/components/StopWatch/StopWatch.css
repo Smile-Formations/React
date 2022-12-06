@@ -17,10 +17,10 @@
     content: "";
     height: 350px;
     width: 350px;
-    border-left: 30px solid #111111;
-    border-right: 30px solid #111111;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid #111111;
+    border-left: 40px solid #111111;
+    border-right: 40px solid #111111;
+    border-top: 40px solid transparent;
+    border-bottom: 40px solid #111111;
     border-radius: 900px;
     z-index: 2;
     position: absolute;
@@ -30,8 +30,8 @@
 
 .StopWatch::after {
     content: "";
-    height: 410px;
-    width: 410px;
+    height: 430px;
+    width: 430px;
     border-left: 3px solid #3c3c3c;
     border-right: 3px solid #3c3c3c;
     border-top: 3px solid transparent;
