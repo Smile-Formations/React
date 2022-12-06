@@ -1,11 +1,11 @@
-.TracksPage__buttons {
+.TrackPage__buttons {
     text-align: right;
     position: relative;
     width: 700px;
     margin: 10px auto;
 }
 
-.TracksPage__title {
+.TrackPage__title {
     position: absolute;
     margin: 0;
     font-size: 20px;
@@ -13,7 +13,7 @@
     width: 100%;
 }
 
-.TracksPage__button {
+.TrackPage__button {
     display: inline-block;
     padding: 5px 10px;
     background-color: #ddd;
@@ -23,6 +23,6 @@
     position: relative;
 }
 
-.TracksPage__button:hover {
+.TrackPage__button:hover {
     background-color: #ccc;
 }

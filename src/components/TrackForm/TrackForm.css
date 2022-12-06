@@ -1,0 +1,59 @@
+.TrackForm__table, .TrackForm {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.TrackForm__row {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.TrackForm__cell {
+    display: table-cell;
+    width: 100%;
+}
+
+.TrackForm__cell label {
+    font-size: 14px;
+    opacity: 0.5;
+    margin-bottom: 4px;
+}
+
+.TrackForm__cell input,
+.TrackForm__cell select,
+.TrackForm__cell textarea {
+    width: 100%;
+}
+
+.TrackForm__buttons {
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.TrackForm__button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #D07854;
+    color: #000;
+    text-decoration: none;
+    border-radius: 5px;
+    position: relative;
+    border: 1px solid #D07854;
+    cursor: pointer;
+    margin: auto;
+    transition: all linear 0.15s;
+}
+
+.TrackForm__button:hover {
+    background-color: #141414;
+    border: 1px solid #D07854;
+    color: #D07854;
+}

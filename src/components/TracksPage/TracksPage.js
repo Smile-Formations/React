@@ -6,6 +6,7 @@ import Filters from '../Filters/Filters';
 import List from '../List/List';
 
 import './TracksPage.css';
+import {Link} from "react-router-dom";
 
 function TracksPage() {
     const categories = useCategories();
@@ -13,6 +14,9 @@ function TracksPage() {
 
     return (
         <Container>
+            <Link to="/track">
+                <span className="TracksPage__button">Add new track</span>
+            </Link>
             <Filters
                 categories={categories}
                 filters={filters}
