@@ -3,6 +3,7 @@ import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTrac
 
 import Filters from '../Filters/Filters';
 import Container from '../Container/Container';
+import List from "../List/List";
 
 import './App.css';
 
@@ -12,14 +13,17 @@ function App() {
     const { tracks, filters, setFilters } = useFilteredTracks();
 
     return (
-        <div className="App__container">
+        <Container>
             <Filters
                 categories={categories}
                 filters={filters}
                 onFilterChanged={handleFilterChanged}
             />
-            <Container />
-        </div>
+            <List
+                tracks={tracks}
+                categories={categories}
+            />
+        </Container>
     );
 
     function handleFilterChanged(filter, value) {
