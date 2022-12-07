@@ -1,4 +1,9 @@
-import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+import {
+    BrowserRouter as Router,
+    /*Navigate, */
+    Route,
+    Routes
+} from 'react-router-dom';
 
 import { useCategories } from '../../hooks/useCategories/useCategories';
 
