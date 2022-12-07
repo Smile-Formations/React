@@ -12,7 +12,6 @@ import Loader from "../Loader/Loader";
 import Categories from "../../contexts/Categories";
 import { useCategories } from "../../hooks/useCategories/useCategories";
 
-
 import "./App.css";
 
 const TrackPage = lazy(() => import("../TrackPage/TrackPage"));
@@ -21,6 +20,7 @@ const About = lazy(() => import("../About/About"));
 const Error404 = lazy(() => import("../Error404/Error404"));
 
 function App() {
+
     const categories = useCategories();
 
     return (
