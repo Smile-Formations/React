@@ -3,7 +3,7 @@ import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 
 import Categories from '../../contexts/Categories';
-// import { useDebug } from '../../hooks/useDebug/useDebug';
+//import { useDebug } from '../../hooks/useDebug/useDebug';
 
 import './JukeBox.css';
 
@@ -11,7 +11,7 @@ function JukeBox(props) {
     const { track, onRemove } = props;
     const [selected, setSelected] = useState(false);
     const categories = useContext(Categories);
-    // useDebug(props);
+    //console.log(useDebug(props));
 
     const category = categories.find(category => category.id === track.category);
 
