@@ -74,7 +74,7 @@ Imagine we want to reorder the list.
 
 Without the `key` attribute the array index is used to identify each item in the iteration:
 
-![3 DOM updates are needed](/without-key.png)
+![3 DOM updates are needed](../assets/without-key.png)
 
 ---
 
@@ -82,4 +82,4 @@ Without the `key` attribute the array index is used to identify each item in the
 
 Use an id to identify each item of the iteration:
 
-![Only 1 DOM update is needed](/with-key.png)
+![Only 1 DOM update is needed](../assets/with-key.png)
