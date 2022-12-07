@@ -9,7 +9,6 @@ import Title from '../Title/Title';
 
 function TrackPage(props) {
 
-    const { categories } = props;
     const { id } = useParams();
     const navigate = useNavigate();
     const [track, setTrack] = useTrack(id);
@@ -23,7 +22,6 @@ function TrackPage(props) {
             <Title linkProps={{children: 'Back', to: '/'}} title={title}/>
             <TrackForm
                 track={track}
-                categories={categories}
                 onTrackChange={handleTrackChange}
                 onSubmit={handleSubmit}
             />
@@ -42,9 +40,5 @@ function TrackPage(props) {
         }
     }
 }
-
-TrackPage.defaultProps = {
-    categories: []
-};
 
 export default TrackPage;

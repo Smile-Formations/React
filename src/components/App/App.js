@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
 
+import Categories from "../../contexts/Categories";
 import { useCategories } from '../../hooks/useCategories/useCategories';
 
 import TrackPage from '../TrackPage/TrackPage';
@@ -15,18 +16,20 @@ function App() {
     const categories = useCategories();
 
     return (
-        <Router>
-            <Routes>
-                <Route path="/" element={<Layout/>}>
-                    <Route index element={<TracksPage categories={categories} />}/>
-                    <Route path="track" element={<TrackPage categories={categories} />}/>
-                    <Route path="track/:id" element={<TrackPage categories={categories} />}/>
-                    <Route path="about" element={<About />}/>
-                    <Route path="*" element={<Error404 />}/>
-                    {/*<Route path="*" element={<Navigate to="/" />}/>*/}
-                </Route>
-            </Routes>
-        </Router>
+        <Categories.Provider value={categories}>
+            <Router>
+                <Routes>
+                    <Route path="/" element={<Layout/>}>
+                        <Route index element={<TracksPage categories={categories} />}/>
+                        <Route path="track" element={<TrackPage categories={categories} />}/>
+                        <Route path="track/:id" element={<TrackPage categories={categories} />}/>
+                        <Route path="about" element={<About />}/>
+                        <Route path="*" element={<Error404 />}/>
+                        {/*<Route path="*" element={<Navigate to="/" />}/>*/}
+                    </Route>
+                </Routes>
+            </Router>
+        </Categories.Provider>
     );
 }
 

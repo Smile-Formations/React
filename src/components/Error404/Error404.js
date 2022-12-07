@@ -1,6 +1,8 @@
 import Container from "../Container/Container";
 import {Link} from "react-router-dom";
 
+import "./Error404.css";
+
 function Error404 () {
 
     return (

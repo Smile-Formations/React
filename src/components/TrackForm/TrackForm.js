@@ -1,8 +1,12 @@
+import {useContext} from "react";
+import Categories from "../../contexts/Categories";
+
 import './TrackForm.css';
 
 function TrackForm(props) {
 
-    const { track, categories, onTrackChange, onSubmit } = props;
+    const { track, onTrackChange, onSubmit } = props;
+    const categories = useContext(Categories);
 
     return (
         <form className="TrackForm" onSubmit={handleSubmit}>
@@ -111,8 +115,7 @@ function TrackForm(props) {
 }
 
 TrackForm.defaultProps = {
-    track: {},
-    categories: []
+    track: {}
 };
 
 export default TrackForm;

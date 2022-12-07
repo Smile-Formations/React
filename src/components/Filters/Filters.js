@@ -1,10 +1,12 @@
-import { useEffect, useRef } from 'react';
+import {useContext, useEffect, useRef} from 'react';
+import Categories from '../../contexts/Categories';
 
 import './Filters.css';
 
 function Filters(props) {
-  const { categories, filters, onFilterChanged } = props;
+  const { filters, onFilterChanged } = props;
   const { category, title } = filters;
+  const categories = useContext(Categories);
   const inputRef = useRef();
 
   useEffect(() => {
@@ -43,7 +45,6 @@ function Filters(props) {
 }
 
 Filters.defaultProps = {
-  categories: [],
   filters: {}
 };
 

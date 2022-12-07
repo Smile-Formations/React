@@ -1,12 +1,14 @@
-import { useState } from 'react';
+import {useContext, useState} from 'react';
 import classnames from 'classnames';
+import Categories from '../../contexts/Categories';
+import { Link } from "react-router-dom";
 
 import './JukeBox.css';
-import {Link} from "react-router-dom";
 
 function JukeBox(props) {
-    const { track, categories, onRemove } = props;
+    const { track, onRemove } = props;
     const [selected, setSelected] = useState(false);
+    const categories = useContext(Categories);
 
     const category = categories.find(category => category.id === track.category);
 
@@ -52,8 +54,7 @@ function JukeBox(props) {
 }
 
 JukeBox.defaultProps = {
-    track: {},
-    categories: []
+    track: {}
 };
 
 export default JukeBox;
