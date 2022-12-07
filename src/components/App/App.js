@@ -6,11 +6,12 @@ import {
     Routes,
 } from "react-router-dom";
 
+import Layout from "../Layout/Layout";
+import Loader from "../Loader/Loader";
+
 import Categories from "../../contexts/Categories";
 import { useCategories } from "../../hooks/useCategories/useCategories";
 
-import Layout from "../Layout/Layout";
-import Loader from "../Loader/Loader";
 
 import "./App.css";
 
