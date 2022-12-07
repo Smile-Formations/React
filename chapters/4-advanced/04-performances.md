@@ -19,7 +19,7 @@ Try the following scenario:
 5. End the record
 6. Check the result
 
-<img alt="Performance record" src="/react-perf-1.png" class="h-90" />
+<img alt="Performance record" src="../assets/react-perf-1.png" class="h-90" />
 
 <!--
 More informations: https://marmelab.com/blog/2017/02/06/react-is-slow-react-is-fast.html
@@ -100,7 +100,7 @@ function Example(props) {
 
 After doing all optimization you should have something like this:
 
-<img alt="Performance record" src="/react-perf-2.png" class="h-90" />
+<img alt="Performance record" src="../assets/react-perf-2.png" class="h-90" />
 
 <!--
   Note the greyed `Title` and `JukeBox` components
