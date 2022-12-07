@@ -1,6 +1,6 @@
-import "./HelloKitty.css";
+import "./Loader.css";
 
-function HelloKitty() {
+function Loader() {
 
     return (
         <div className="Loader__container">
@@ -57,4 +57,4 @@ function HelloKitty() {
     )
 }
 
-export default HelloKitty;
+export default Loader;
