@@ -59,3 +59,4 @@ function Example() {
 
 3. Create a `Layout` component rendering the `Header` and `Outlet` components.
 4. Use child routes to display the header through the Layout component for all our application routes.
+5. Créer les pages `About` et `Error404` puis déclarez les routes dans `App`
