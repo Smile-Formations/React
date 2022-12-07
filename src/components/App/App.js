@@ -1,15 +1,15 @@
-import { Suspense, lazy } from 'react';
+import { lazy, Suspense } from "react";
 import {
     BrowserRouter as Router,
-    /*Navigate, */
+    /*Navigate,*/
     Route,
-    Routes
-} from 'react-router-dom';
+    Routes,
+} from "react-router-dom";
 
 import Categories from "../../contexts/Categories";
-import { useCategories } from '../../hooks/useCategories/useCategories';
+import { useCategories } from "../../hooks/useCategories/useCategories";
 
-import Layout from '../Layout/Layout';
+import Layout from "../Layout/Layout";
 import Loader from "../Loader/Loader";
 
 import "./App.css";
@@ -20,7 +20,6 @@ const About = lazy(() => import("../About/About"));
 const Error404 = lazy(() => import("../Error404/Error404"));
 
 function App() {
-
     const categories = useCategories();
 
     return (
@@ -28,13 +27,13 @@ function App() {
             <Router>
                 <Suspense fallback={<Loader/>}>
                     <Routes>
-                        <Route path="/" element={<Layout/>}>
-                            <Route index element={<TracksPage />}/>
-                            <Route path="track" element={<TrackPage />}/>
-                            <Route path="track/:id" element={<TrackPage />}/>
-                            <Route path="about" element={<About />}/>
-                            <Route path="*" element={<Error404 />}/>
-                            {/*<Route path="*" element={<Navigate to="/" />}/>*/}
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<TracksPage />} />
+                            <Route path="track" element={<TrackPage />} />
+                            <Route path="track/:id" element={<TrackPage />} />
+                            <Route path="about" element={<About />} />
+                            <Route path="*" element={<Error404 />} />
+                            {/*<Route path="*" element={<Navigate to="/" />} />*/}
                         </Route>
                     </Routes>
                 </Suspense>

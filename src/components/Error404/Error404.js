@@ -1,7 +1,6 @@
 import Container from "../Container/Container";
 import {Link} from "react-router-dom";
-
-import "./Error404.css";
+import {memo} from "react";
 
 function Error404 () {
 
@@ -16,4 +15,4 @@ function Error404 () {
     )
 }
 
-export default Error404;
+export default memo(Error404);

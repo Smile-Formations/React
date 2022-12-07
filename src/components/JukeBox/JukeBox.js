@@ -1,7 +1,9 @@
-import {useContext, useState} from 'react';
+import { memo, useContext, useState } from 'react';
 import classnames from 'classnames';
+import { Link } from 'react-router-dom';
+
 import Categories from '../../contexts/Categories';
-import { Link } from "react-router-dom";
+// import { useDebug } from '../../hooks/useDebug/useDebug';
 
 import './JukeBox.css';
 
@@ -9,6 +11,7 @@ function JukeBox(props) {
     const { track, onRemove } = props;
     const [selected, setSelected] = useState(false);
     const categories = useContext(Categories);
+    // useDebug(props);
 
     const category = categories.find(category => category.id === track.category);
 
@@ -30,13 +33,14 @@ function JukeBox(props) {
                                 </svg>
                             </Link>
                             <span className="JukeBox__link" onClick={handleRemove} >
-                                <svg className="JukeBox__svg JukeBox__bin" viewBox="0 0 24 24">
-                                    <path d="M18.984 3.984v2.016h-13.969v-2.016h3.469l1.031-0.984h4.969l1.031 0.984h3.469zM6 18.984v-12h12v12q0 0.797-0.609 1.406t-1.406 0.609h-7.969q-0.797 0-1.406-0.609t-0.609-1.406z"/>
-                                </svg>
-                            </span>
+                            <svg className="JukeBox__svg JukeBox__bin" viewBox="0 0 24 24">
+                                <path d="M18.984 3.984v2.016h-13.969v-2.016h3.469l1.031-0.984h4.969l1.031 0.984h3.469zM6 18.984v-12h12v12q0 0.797-0.609 1.406t-1.406 0.609h-7.969q-0.797 0-1.406-0.609t-0.609-1.406z"/>
+                            </svg>
+                        </span>
                         </div>
                     </div>
                     <span className="JukeBox__details">{track.band} ({track.album} - {track.year})</span>
+
                 </div>
             </div>
             <div className="JukeBox__cell">{category ? category.title : track.category}</div>
@@ -57,4 +61,4 @@ JukeBox.defaultProps = {
     track: {}
 };
 
-export default JukeBox;
+export default memo(JukeBox);

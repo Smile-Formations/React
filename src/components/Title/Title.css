@@ -1,32 +1,35 @@
 .Title {
-    text-align: right;
-    width: 100%;
-    max-width: 800px;
-    margin: 10px auto;
-    color: #D07854;
+  text-align: right;
+  position: relative;
+  width: 100%;
+  max-width: 800px;
+  margin: 10px auto;
+  color: #D07854;
 }
 
 .Title__title {
-    margin: 0;
-    font-size: 30px;
-    text-align: center;
-    width: 100%;
+  position: absolute;
+  margin: 0;
+  top: -5px;
+  font-size: 30px;
+  text-align: center;
+  width: 100%;
 }
 
 .Title__button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #D07854;
-    color: #000;
-    text-decoration: none;
-    border-radius: 5px;
-    position: relative;
-    border: 1px solid #D07854;
-    transition: all linear 0.15s
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #D07854;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+  position: relative;
+  border: 1px solid #D07854;
+  transition: all linear 0.15s
 }
 
 .Title__button:hover {
-    background-color: #141414;
-    border: 1px solid #D07854;
-    color: #D07854;
+  background-color: #141414;
+  border: 1px solid #D07854;
+  color: #D07854;
 }

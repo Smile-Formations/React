@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import { Link } from 'react-router-dom';
 
 import logo from '../../logo.png';
@@ -5,7 +6,6 @@ import logo from '../../logo.png';
 import './Header.css';
 
 function Header() {
-
     return (
         <div className="Header" >
             <div className="Header__container">
@@ -14,10 +14,10 @@ function Header() {
                 </Link>
                 <ul className="Header__list" >
                     <li className="Header__item" >
-                        <Link to="/" className="Header__link">My Radio</Link>
+                        <Link className="Header__link" to="/">My Radio</Link>
                     </li>
                     <li className="Header__item" >
-                        <Link to="/about" className="Header__link">About</Link>
+                        <Link className="Header__link" to="/about">About</Link>
                     </li>
                 </ul>
             </div>
@@ -25,4 +25,4 @@ function Header() {
     );
 }
 
-export default Header;
+export default memo(Header);

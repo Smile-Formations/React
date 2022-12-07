@@ -15,7 +15,7 @@ describe('track service', () => {
     expect(track.id).toEqual(42);
     expect(fetch).toHaveBeenCalledWith('/tracks/42');
   });
-
+  
   it('getTracks', async () => {
     fetch.mockResponseOnce(JSON.stringify([{ id: 42 }]));
     const tracks = await getTracks();

@@ -2,10 +2,10 @@ import React from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
 
 import List from './List';
-import JukeBox from '../JukeBox/Article';
+import { MemoryRouter } from 'react-router-dom';
 
 describe('List component', () => {
-  const articles = [
+  const tracks = [
     {
       "id": 1,
       "title": "Find The Real",
@@ -42,7 +42,7 @@ describe('List component', () => {
   ];
 
   it('should render 3 JukeBox components', async () => {
-    render(<List articles={articles} />);
+    render(<List tracks={tracks} />, {wrapper: MemoryRouter});
     const elements = await screen.findAllByText(/Track/);
     expect(elements.length).toBe(3);
   });
