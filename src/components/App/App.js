@@ -20,9 +20,9 @@ function App() {
             <Router>
                 <Routes>
                     <Route path="/" element={<Layout/>}>
-                        <Route index element={<TracksPage categories={categories} />}/>
-                        <Route path="track" element={<TrackPage categories={categories} />}/>
-                        <Route path="track/:id" element={<TrackPage categories={categories} />}/>
+                        <Route index element={<TracksPage />}/>
+                        <Route path="track" element={<TrackPage />}/>
+                        <Route path="track/:id" element={<TrackPage />}/>
                         <Route path="about" element={<About />}/>
                         <Route path="*" element={<Error404 />}/>
                         {/*<Route path="*" element={<Navigate to="/" />}/>*/}
