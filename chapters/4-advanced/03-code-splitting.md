@@ -67,7 +67,7 @@ It assumes that the `./OtherComponent` file as a default export exposing a React
 
 Lazy loaded component must be wrapped inside a `Suspense` component:
 ```jsx
-import { lazy } from 'react';
+import { Suspense, lazy } from 'react';
 
 const OtherComponent = lazy(() => import('./OtherComponent'));
 
