@@ -2,8 +2,6 @@ import './About.css';
 import Title from "../Title/Title";
 import Container from "../Container/Container";
 
-const linkProps = { children: 'Back', to: '/' };
-
 function About () {
 
     const title = 'About Smile Radio'
@@ -11,7 +9,7 @@ function About () {
     return(
         <>
             <Container>
-                <Title linkProps={linkProps} title={title} />
+                <Title title={title} />
                 <p className='About__content'>
                     Nulla porttitor accumsan tincidunt. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus.
 
