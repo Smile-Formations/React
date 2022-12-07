@@ -27,7 +27,7 @@ it('should render the category title', () => {
     </Categories.Provider>
   ), {wrapper: MemoryRouter});
 
-  expect(wrapper.find('.JukeBox__cell').at(1).text()).toEqual('News');
+  expect(wrapper.find('.JukeBox__cell').at(1).text()).toEqual('Metal');
 });
 ```
 

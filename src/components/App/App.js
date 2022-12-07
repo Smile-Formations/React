@@ -1,3 +1,4 @@
+import { Suspense, lazy } from 'react';
 import {
     BrowserRouter as Router,
     /*Navigate, */
@@ -8,13 +9,14 @@ import {
 import Categories from "../../contexts/Categories";
 import { useCategories } from '../../hooks/useCategories/useCategories';
 
-import TrackPage from '../TrackPage/TrackPage';
-import TracksPage from '../TracksPage/TracksPage';
-import About from "../About/About";
-import Error404 from "../Error404/Error404";
 import Layout from '../Layout/Layout';
 
 import "./App.css";
+
+const TrackPage = lazy(() => import("../TrackPage/TrackPage"));
+const TracksPage = lazy(() => import("../TracksPage/TracksPage"));
+const About = lazy(() => import("../About/About"));
+const Error404 = lazy(() => import("../Error404/Error404"));
 
 function App() {
 
@@ -23,16 +25,18 @@ function App() {
     return (
         <Categories.Provider value={categories}>
             <Router>
-                <Routes>
-                    <Route path="/" element={<Layout/>}>
-                        <Route index element={<TracksPage />}/>
-                        <Route path="track" element={<TrackPage />}/>
-                        <Route path="track/:id" element={<TrackPage />}/>
-                        <Route path="about" element={<About />}/>
-                        <Route path="*" element={<Error404 />}/>
-                        {/*<Route path="*" element={<Navigate to="/" />}/>*/}
-                    </Route>
-                </Routes>
+                <Suspense fallback={<div>Loading...</div>}>
+                    <Routes>
+                        <Route path="/" element={<Layout/>}>
+                            <Route index element={<TracksPage />}/>
+                            <Route path="track" element={<TrackPage />}/>
+                            <Route path="track/:id" element={<TrackPage />}/>
+                            <Route path="about" element={<About />}/>
+                            <Route path="*" element={<Error404 />}/>
+                            {/*<Route path="*" element={<Navigate to="/" />}/>*/}
+                        </Route>
+                    </Routes>
+                </Suspense>
             </Router>
         </Categories.Provider>
     );
