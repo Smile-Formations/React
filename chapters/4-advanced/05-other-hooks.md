@@ -226,16 +226,11 @@ Transition are non-urgent actions that can be suspended until urgent work is fin
 2. a function to start the transition
 
 ---
-layout: two-cols-with-title
----
 
 ### Example
 
-::left::
-
 ```jsx
 import { useState, useTransition } from 'react';
-import List from '../List/List';
 
 function Counter() {
   const [isPending, startTransition] = useTransition();
@@ -257,16 +252,12 @@ function Counter() {
     </div>
   );
 }
-```
 
-::right::
-
-```jsx
 function List(props) {
-  const { count } = props;
-  return new Array(+count).fill().map((_, i) => (
-    <div key={i}>{i}</div>
-  ));
+    const { count } = props;
+    return new Array(+count).fill().map((_, i) => (
+        <div key={i}>{i}</div>
+    ));
 }
 ```
 
