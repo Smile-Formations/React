@@ -1,7 +1,7 @@
 import { lazy, Suspense } from "react";
 import {
     BrowserRouter as Router,
-    Navigate,
+    /*Navigate,*/
     Route,
     Routes,
 } from "react-router-dom";
