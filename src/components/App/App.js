@@ -26,20 +26,24 @@ function App() {
                 <Suspense fallback={<div>Loading...</div>}>
                     <Routes>
                         <Route path="/" element={<Layout />}>
-                            <Route index element={<TracksPage categories={categories} />} />
+                            <Route index element={<TracksPage />} />
                             <Route
-                                path="/track"
-                                element={<TrackPage categories={categories} />}
+                                path="track"
+                                element={<TrackPage />}
                             />
                             <Route
-                                path="/track/:id"
-                                element={<TrackPage categories={categories} />}
+                                path="track/:id"
+                                element={<TrackPage />}
                             />
                             <Route
-                                path="/about"
+                                path="about"
                                 element={<About />}
                             />
-                            <Route path="*" element={<Navigate to="/" />} />
+                            <Route
+                                path="*"
+                                element={<Error404 />}
+                            />
+                            {/*<Route path="*" element={<Navigate to="/" />} />*/}
                         </Route>
                     </Routes>
                 </Suspense>
