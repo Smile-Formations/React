@@ -1,6 +1,5 @@
-# Smile Radio
+# Stop watch Workshop
 
-Welcome to Smile Radio project
+Welcome to Smile `Stop watch Workshop`
 
-We'll learn how to create a simple Multiple pages React App.
-Fetch data from Deezer API
+Here the code of the `Stop watch` exercise.
