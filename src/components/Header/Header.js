@@ -16,6 +16,9 @@ function Header() {
           <li className="Header__item" >
             <Link to="/" className="Header__link">My Radio</Link>
           </li>
+          <li className="Header__item" >
+            <Link to="/about" className="Header__link">About</Link>
+          </li>
         </ul>
       </div>
     </div>
