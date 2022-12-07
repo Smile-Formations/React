@@ -10,6 +10,7 @@ import Categories from "../../contexts/Categories";
 import { useCategories } from "../../hooks/useCategories/useCategories";
 
 import Layout from "../Layout/Layout";
+import Loader from "../Loader/Loader";
 
 import "./App.css";
 
@@ -24,7 +25,7 @@ function App() {
     return (
         <Categories.Provider value={categories}>
             <Router>
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<Loader/>}>
                     <Routes>
                         <Route path="/" element={<Layout />}>
                             <Route index element={<TracksPage />} />
