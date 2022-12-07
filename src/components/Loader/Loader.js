@@ -1,6 +1,7 @@
 import "./Loader.css";
+import {memo} from "react";
 
-export default function Loader() {
+function Loader() {
 
     return (
         <div className="Loader__container">
@@ -134,3 +135,5 @@ export default function Loader() {
         </div>
     )
 }
+
+export default memo(Loader);

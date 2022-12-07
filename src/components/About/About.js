@@ -1,6 +1,7 @@
 import './About.css';
 import Title from "../Title/Title";
 import Container from "../Container/Container";
+import {memo} from "react";
 
 function About () {
 
@@ -40,4 +41,4 @@ function About () {
     )
 }
 
-export default About;
+export default memo(About);
