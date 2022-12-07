@@ -1,6 +1,5 @@
 # Smile Radio
 
-Welcome to Smile Radio project
+Welcome to Smile Radio project version 3
 
-We'll learn how to create a simple Multiple pages React App.
-Fetch data from Deezer API
+Here the code of the last version from the Smile Radio project.
