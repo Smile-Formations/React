@@ -1,23 +1,28 @@
-import { BrowserRouter, Route, Routes, Navigate } from 'react-router-dom';
+import { BrowserRouter as Router, Navigate, Route, Routes } from 'react-router-dom';
+
+import { useCategories } from '../../hooks/useCategories/useCategories';
+
+import TrackPage from '../TrackPage/TrackPage';
 import TracksPage from '../TracksPage/TracksPage';
+import Layout from '../Layout/Layout';
 
 import "./App.css";
-import TrackPage from "../TrackPage/TrackPage";
-import {useCategories} from "../../hooks/useCategories/useCategories";
 
 function App() {
 
     const categories = useCategories();
 
     return (
-        <BrowserRouter>
+        <Router>
             <Routes>
-                <Route path="/" element={<TracksPage/>} />
-                <Route path="/track" element={<TrackPage categories={categories}/>} />
-                <Route path="/track/:id" element={<TrackPage categories={categories} />}/>
-                <Route path="*" element={<Navigate to="/" />} />
+                <Route path="/" element={<Layout/>}>
+                    <Route index element={<TracksPage categories={categories} />}/>
+                    <Route path="/track" element={<TrackPage categories={categories} />}/>
+                    <Route path="/track/:id" element={<TrackPage categories={categories} />}/>
+                    <Route path="*" element={<Navigate to="/" />}/>
+                </Route>
             </Routes>
-        </BrowserRouter>
+        </Router>
     );
 }
 

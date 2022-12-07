@@ -34,10 +34,10 @@ Example:
 ```jsx
 function Layout() {
   return (
-    <div>
+    <>
       <Header/>
       <Outlet/>
-    </div>
+    </>
   );
 }
 ```
