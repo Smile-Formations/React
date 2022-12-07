@@ -61,4 +61,4 @@ JukeBox.defaultProps = {
     track: {}
 };
 
-export default memo(JukeBox);
+export default JukeBox;

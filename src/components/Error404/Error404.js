@@ -15,4 +15,4 @@ function Error404 () {
     )
 }
 
-export default memo(Error404);
+export default Error404;

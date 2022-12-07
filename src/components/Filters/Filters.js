@@ -51,4 +51,4 @@ Filters.defaultProps = {
   filters: {}
 };
 
-export default memo(Filters);
+export default Filters;

@@ -265,29 +265,7 @@ function Counter() {
 function List(props) {
   const { count } = props;
   return new Array(+count).fill().map((_, i) => (
-    <div key={i}>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-      <div><div><div><div><div><div><div><div><div><div>
-        {i}
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-      </div></div></div></div></div></div></div></div></div></div>
-    </div>
+    <div key={i}>{i}</div>
   ));
 }
 ```
