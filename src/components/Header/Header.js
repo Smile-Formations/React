@@ -14,7 +14,7 @@ function Header() {
                 </Link>
                 <ul className="Header__list" >
                     <li className="Header__item" >
-                        <Link className="Header__link">My Radio</Link>
+                        <Link to="/" className="Header__link">My Radio</Link>
                     </li>
                 </ul>
             </div>
