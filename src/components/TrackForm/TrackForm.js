@@ -61,7 +61,7 @@ function TrackForm(props) {
           </div>
           <div className="TrackForm__cell">
             <select id="category" name="category" onChange={handleChange} value={track.category} >
-              <option value=""/>
+              <option value="">All</option>
               {categories.map(category => (
                 <option key={category.id} value={category.id} >{category.title}</option>
               ))}
