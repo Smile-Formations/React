@@ -120,4 +120,4 @@ TrackForm.defaultProps = {
   track: {}
 };
 
-export default TrackForm;
+export default memo(TrackForm);

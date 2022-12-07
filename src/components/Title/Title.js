@@ -18,4 +18,4 @@ function Title(props) {
   );
 }
 
-export default Title;
+export default memo(Title);

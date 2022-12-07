@@ -1,4 +1,4 @@
-import {lazy, Suspense, useState, useTransition} from "react";
+import { lazy, Suspense } from "react";
 import {
     BrowserRouter as Router,
     /*Navigate,*/
@@ -6,11 +6,12 @@ import {
     Routes,
 } from "react-router-dom";
 
+import Layout from "../Layout/Layout";
+import Loader from "../Loader/Loader";
+
 import Categories from "../../contexts/Categories";
 import { useCategories } from "../../hooks/useCategories/useCategories";
 
-import Layout from "../Layout/Layout";
-import Loader from "../Loader/Loader";
 
 import "./App.css";
 
@@ -20,31 +21,26 @@ const About = lazy(() => import("../About/About"));
 const Error404 = lazy(() => import("../Error404/Error404"));
 
 function App() {
-    const [isPending, startTransition] = useTransition();
-    const [value, setValue] = useState(0);
-    const [count, setCount] = useState(0);
-
-    function handleChange(event) {
-        const { value } = event.target;
-        setValue(value);
-        startTransition(() => {
-            setCount(value);
-        })
-    }
+    const categories = useCategories();
 
     return (
-        <div>
-            <input type="range" onChange={handleChange} value={value}/>
-            {isPending ? <div>Loading...</div> : <List count={count}/>}
-        </div>
+        <Categories.Provider value={categories}>
+            <Router>
+                <Suspense fallback={<Loader/>}>
+                    <Routes>
+                        <Route path="/" element={<Layout />}>
+                            <Route index element={<TracksPage />} />
+                            <Route path="track" element={<TrackPage />} />
+                            <Route path="track/:id" element={<TrackPage />} />
+                            <Route path="about" element={<About />} />
+                            <Route path="*" element={<Error404 />} />
+                            {/*<Route path="*" element={<Navigate to="/" />} />*/}
+                        </Route>
+                    </Routes>
+                </Suspense>
+            </Router>
+        </Categories.Provider>
     );
-}
-
-function List(props) {
-    const { count } = props;
-    return new Array(+count).fill().map((_, i) => (
-        <div key={i}>{i}</div>
-    ));
 }
 
 export default App;
