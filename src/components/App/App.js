@@ -156,13 +156,33 @@ function App () {
     return (
         <MyComponent>
             {(myComponentChildrenFunction) => (
-                <div>
-                    <span>{myComponentChildrenFunction.foo}</span>
-                    <span>{myComponentChildrenFunction.bar}</span>
+                <div style={styles.toto}>
+                    <span>{process.env.REACT_APP_TOTO}</span>
+                    <br/>
+                    <span style={styles.span1}>{myComponentChildrenFunction.foo}</span>
+                    <span style={styles.span2}>{myComponentChildrenFunction.bar}</span>
                 </div>
             )}
         </MyComponent>
     )
+}
+
+const styles = {
+    toto: {
+        color: 'yellow',
+        transformOrigin: '50% 50%',
+        transform: 'rotate(-45deg)',
+        width: 'max-content',
+        position: 'relative',
+        top: 50,
+        left: 50
+    },
+    span1: {
+        color: 'var(--primary-color)'
+    },
+    span2: {
+        color: 'var(--secondary-color)'
+    }
 }
 
 export default App;
