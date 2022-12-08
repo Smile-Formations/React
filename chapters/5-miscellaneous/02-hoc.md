@@ -45,7 +45,7 @@ export default withHoc(MyComponent);
 It is a good practice to wrap the display name of the component:
 ```jsx
 export default function withHoc(Cmp) {
-  return function WithHoc(props) {
+  function WithHoc(props) {
     return (
       <Cmp {...props} />
     );

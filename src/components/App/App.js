@@ -144,20 +144,28 @@ function Comments(props) {
 }
 
 function fullBlogPostWithCommentsHOC(Cmp) {
-    return function(props) {
+    function WithHoc(props) {
         console.log(props)
         return (
             <article>
                 <Cmp {...props} />
-                <Comments articleId={props.articleId} />
+                <Comments articleId={props.articleId}/>
             </article>
         );
     }
+
+    WithHoc.displayName = `WithHoc(${getDisplayName(Cmp)})`;
+    return WithHoc;
+}
+
+function getDisplayName(Cmp) {
+    return Cmp.displayName || Cmp.name || 'Component';
 }
 
 function App() {
 
     const FullPost = fullBlogPostWithCommentsHOC(BlogPost)
+    console.log(FullPost.displayName)
     return(
         <>
             <BlogPost articleId="1"/>
