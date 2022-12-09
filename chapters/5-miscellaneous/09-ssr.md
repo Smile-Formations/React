@@ -25,6 +25,6 @@ const html = ReactDOMServer.renderToString(<Component />);
 
 If you want an isomorphic app, or a static export from your application, you can check out following framework:
 
-* `Next.js`
+* <a target="_blank" href="https://nextjs.org/docs/getting-started">`Next.js`</a>
 * `Gatsby`
 * `Remix`
