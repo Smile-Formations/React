@@ -16,12 +16,10 @@ export default function ControlButtons(props) {
 
     const ActiveButtons = (
         <>
-            <div className="ControlButtons__btn ControlButtons__btn-start-reset active"
-                 onClick={props.handleReset}>
+            <div className="ControlButtons__btn ControlButtons__btn-start-reset active" onClick={props.handleReset}>
                 <div/>
             </div>
-            <div className={classNames("ControlButtons__btn ControlButtons__btn-pause-resume active", {resume: props.isPaused})}
-                 onClick={props.handlePauseResume}>
+            <div className={classNames("ControlButtons__btn ControlButtons__btn-pause-resume active", {resume: props.isPaused})} onClick={props.handlePauseResume}>
                 <div/>
             </div>
         </>
