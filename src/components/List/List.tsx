@@ -1,4 +1,5 @@
-import JukeBox from '../JukeBox/JukeBox';
+// @ts-ignore
+import JukeBox from '../JukeBox/JukeBox.tsx';
 
 import './List.css';
 

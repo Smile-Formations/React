@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { getTrack } from '../../services/track/track';
+// @ts-ignore
+import { getTrack } from '../../services/track/track.ts';
 
 export function useTrack(trackId) {
   const [track, setTrack] = useState({

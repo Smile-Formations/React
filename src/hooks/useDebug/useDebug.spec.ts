@@ -1,3 +1,4 @@
+// @ts-ignore
 import { renderHook } from '@testing-library/react-hooks';
 
 import { useDebug } from './useDebug';

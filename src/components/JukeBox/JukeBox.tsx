@@ -1,9 +1,11 @@
 import { memo, useContext, useState } from 'react';
+// @ts-ignore
 import classnames from 'classnames';
 import { Link } from 'react-router-dom';
 
-import Categories from '../../contexts/Categories';
-// import { useDebug } from '../../hooks/useDebug/useDebug';
+// @ts-ignore
+import Categories from '../../contexts/Categories.ts';
+// import { useDebug } from '../../hooks/useDebug/useDebug.ts';
 
 import './JukeBox.css';
 
@@ -13,6 +15,7 @@ function JukeBox(props) {
     const categories = useContext(Categories);
     // useDebug(props);
 
+    // @ts-ignore
     const category = categories.find(category => category.id === track.category);
 
     return (

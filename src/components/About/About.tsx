@@ -1,6 +1,8 @@
 import './About.css';
-import Title from "../Title/Title";
-import Container from "../Container/Container";
+// @ts-ignore
+import Title from "../Title/Title.tsx";
+// @ts-ignore
+import Container from "../Container/Container.tsx";
 import {memo} from "react";
 
 function About () {

@@ -1,4 +1,3 @@
-import React from "react";
 import { fireEvent, render, screen } from "@testing-library/react";
 import { act } from "react-dom/test-utils";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
@@ -20,6 +19,7 @@ const renderWithRouter = (ui, path = "/", route = "/") => {
 
 describe("TrackPage component", () => {
   beforeEach(() => {
+    // @ts-ignore
     trackService.getTrack = jest.fn().mockReturnValue(Promise.resolve({
       "id": 1,
       "title": "Find The Real",

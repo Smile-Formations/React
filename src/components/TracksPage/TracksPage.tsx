@@ -1,17 +1,24 @@
 import { useCallback } from 'react';
 
-import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks';
-import { removeTrack } from '../../services/track/track';
+// @ts-ignore
+import { useFilteredTracks } from '../../hooks/useFilteredTracks/useFilteredTracks.ts';
+// @ts-ignore
+import { removeTrack } from '../../services/track/track.ts';
 
-import Container from '../Container/Container';
-import Filters from '../Filters/Filters';
-import List from '../List/List';
-import Title from '../Title/Title';
+// @ts-ignore
+import Container from '../Container/Container.tsx';
+// @ts-ignore
+import Filters from '../Filters/Filters.tsx';
+// @ts-ignore
+import List from '../List/List.tsx';
+// @ts-ignore
+import Title from '../Title/Title.tsx';
 
 const title = 'My Radio';
 const linkProps = { children: 'Add new track', to: '/track' };
 
 function TracksPage() {
+    // @ts-ignore
     const { tracks, filters, setTracks, setFilters } = useFilteredTracks();
 
     const handleFilterChanged = useCallback((filter, value) =>

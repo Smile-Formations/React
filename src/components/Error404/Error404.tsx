@@ -1,4 +1,5 @@
-import Container from "../Container/Container";
+// @ts-ignore
+import Container from "../Container/Container.tsx";
 import {Link} from "react-router-dom";
 
 function Error404 () {

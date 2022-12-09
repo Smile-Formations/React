@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { getCategories } from '../../services/category/category';
+// @ts-ignore
+import { getCategories } from '../../services/category/category.ts';
 
 export function useCategories() {
   const [categories, setCategories] = useState([]);

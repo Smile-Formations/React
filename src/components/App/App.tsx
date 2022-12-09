@@ -6,18 +6,26 @@ import {
     Routes,
 } from "react-router-dom";
 
-import Layout from "../Layout/Layout";
-import Loader from "../Loader/Loader";
+// @ts-ignore
+import Layout from "../Layout/Layout.tsx";
+// @ts-ignore
+import Loader from "../Loader/Loader.tsx";
 
-import Categories from "../../contexts/Categories";
-import { useCategories } from "../../hooks/useCategories/useCategories";
+// @ts-ignore
+import Categories from "../../contexts/Categories.ts";
+// @ts-ignore
+import { useCategories } from "../../hooks/useCategories/useCategories.ts";
 
 import "./App.css";
 
-const TrackPage = lazy(() => import("../TrackPage/TrackPage"));
-const TracksPage = lazy(() => import("../TracksPage/TracksPage"));
-const About = lazy(() => import("../About/About"));
-const Error404 = lazy(() => import("../Error404/Error404"));
+// @ts-ignore
+const TrackPage = lazy(() => import("../TrackPage/TrackPage.tsx"));
+// @ts-ignore
+const TracksPage = lazy(() => import("../TracksPage/TracksPage.tsx"));
+// @ts-ignore
+const About = lazy(() => import("../About/About.tsx"));
+// @ts-ignore
+const Error404 = lazy(() => import("../Error404/Error404.tsx"));
 
 function App() {
 

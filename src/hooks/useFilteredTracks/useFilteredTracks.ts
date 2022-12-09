@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import { getTracks } from '../../services/track/track';
+// @ts-ignore
+import { getTracks } from '../../services/track/track.ts';
 
 export function useFilteredTracks() {
   const [tracks, setTracks] = useState([]);

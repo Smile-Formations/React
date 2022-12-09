@@ -1,7 +1,8 @@
 import { memo, useContext } from 'react';
 
-import Categories from '../../contexts/Categories';
-// import { useDebug } from '../../hooks/useDebug/useDebug';
+// @ts-ignore
+import Categories from '../../contexts/Categories.ts';
+// import { useDebug } from '../../hooks/useDebug/useDebug.ts';
 
 import './TrackForm.css';
 

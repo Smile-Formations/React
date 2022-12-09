@@ -1,3 +1,4 @@
+// @ts-ignore
 import { act, renderHook } from '@testing-library/react-hooks';
 
 import * as trackService from '../../services/track/track';
@@ -9,6 +10,7 @@ jest.mock('../../services/track/track');
 describe('useFilteredTracks hook', () => {
   beforeEach(() => {
     jest.spyOn(trackService, 'getTracks');
+    // @ts-ignore
     trackService.getTracks.mockReturnValue(new Promise(resolve => resolve([
       {
         "id": 1,

@@ -1,12 +1,17 @@
 import { useCallback } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
-import { useTrack } from '../../hooks/useTrack/useTrack';
-import { addTrack, updateTrack } from '../../services/track/track';
+// @ts-ignore
+import { useTrack } from '../../hooks/useTrack/useTrack.ts';
+// @ts-ignore
+import { addTrack, updateTrack } from '../../services/track/track.ts';
 
-import TrackForm from '../TrackForm/TrackForm';
-import Container from '../Container/Container';
-import Title from '../Title/Title';
+// @ts-ignore
+import TrackForm from '../TrackForm/TrackForm.tsx';
+// @ts-ignore
+import Container from '../Container/Container.tsx';
+// @ts-ignore
+import Title from '../Title/Title.tsx';
 
 const linkProps = { children: 'Back', to: '/' };
 
