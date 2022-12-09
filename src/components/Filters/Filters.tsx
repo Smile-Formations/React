@@ -37,7 +37,7 @@ function Filters(props) {
           <label className="Filters__label" htmlFor='category'>Category</label>
           <select name="category" onChange={handleChange} value={category} >
             <option value="" >All</option>
-            {categories.map(category => (
+            {(categories as unknown as any[]).map(category => (
                 <option key={category.id} value={category.id} >{category.title}</option>
             ))}
           </select>
