@@ -4,6 +4,7 @@ import Categories from '../../contexts/Categories';
 // import { useDebug } from '../../hooks/useDebug/useDebug';
 
 import './Filters.css';
+import PropTypes from "prop-types";
 
 function Filters(props) {
   const { filters, onFilterChanged } = props;
@@ -49,6 +50,14 @@ function Filters(props) {
 
 Filters.defaultProps = {
   filters: {}
+};
+
+Filters.propTypes = {
+  filters: PropTypes.shape({
+    category: PropTypes.string,
+    title: PropTypes.string
+  }),
+  onFilterChanged: PropTypes.func
 };
 
 export default memo(Filters);
